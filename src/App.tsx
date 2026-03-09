@@ -47,31 +47,31 @@ const PERSONAL_INFO = {
   resumeUrl: "#", // 可修改：简历 PDF 链接 (用于预览和下载)
   avatarUrl: "https://picsum.photos/seed/liuxiansheng_hero/800/1000", // 可修改：个人头像/首屏大图链接
   globalBgUrl: "https://picsum.photos/seed/game-bg/1920/1080?blur=4", // 可修改：全局背景图片链接
-  intro: "你好！我是先胜。目前正在北邮攻读设计学硕士，专注于游戏战斗策划。我喜欢在严谨的逻辑与直观的反馈之间寻找平衡，希望能为玩家创造一些有趣且难忘的瞬间。", // 可修改：个人简介
+  intro: "目前正在北邮攻读设计学硕士，意向岗位为游戏战斗策划。希望能够通过个人的设计与实现构建出一场又一场领玩家难忘的BOSS战。", // 可修改：个人简介
   summary: [ // 可修改：核心优势列表
-    "在 UE5 的世界里不断探索，尝试用 GAS 框架和行为树去实现我脑海中的战斗构思。",
-    "工业设计出身的我，习惯于从交互逻辑出发，去思考如何让游戏内容既好玩又好看。",
-    "珍惜每一次实践机会，在字节跳动的实习和独立 Demo 的开发中，我学到了很多实战经验。"
+    "掌握UE引擎开发流程，有过完整的从设计游戏框架到开发实现再到最终打包上线的实践经历",
+    "对UE中GamePlay，GameplayTags，GAS框架，动画状态机，AI行为树，状态树等内容均有学习与实践经历",
+    "曾于游戏公司担任派对游戏UGC玩法策划，MOBA游戏战斗策划岗位。"
   ]
 };
 
 // 可修改：软件技能列表
 const SOFTWARE_SKILLS = [
-  { name: "Unreal Engine", icon: <Cpu className="w-6 h-6" />, level: "掌握" },
-  { name: "Unity", icon: <Gamepad2 className="w-6 h-6" />, level: "熟悉" },
-  { name: "Figma", icon: <Layers className="w-6 h-6" />, level: "掌握" },
-  { name: "Axure", icon: <ScrollText className="w-6 h-6" />, level: "掌握" },
-  { name: "Blender", icon: <Box className="w-6 h-6" />, level: "熟悉" }
+  { name: "Unreal Engine", icon: "/icons/UE.svg", level: "掌握" }, // 准备替换为 public/icons/ue.svg
+  { name: "Unity", icon: "/icons/unity.svg", level: "熟悉" },
+  { name: "Figma", icon: "/icons/FigmaIcon.svg", level: "掌握" },
+  { name: "C++", icon: "/icons/C++.svg", level: "基础" },
+  { name: "Blender", icon: "/icons/Blender.svg", level: "熟悉" }
 ];
 
 // 可修改：游戏经历总结
 const GAME_EXPERIENCE = {
   totalHours: "3000+", // 可修改：总时长
-  summary: "我是一个深度的硬核游戏爱好者。从魂系的受难到 MOBA 的博弈，这些经历塑造了我对游戏节奏的理解。我喜欢拆解那些让我心动的瞬间，并尝试将它们转化为设计语言。", // 可修改：总结文案
+  summary: "ARPG，开放世界，MOBA，Rouglike,解密类等游戏品类均有涉猎，对动作游戏类内容接触较多，", // 可修改：总结文案
   categories: [ // 可修改：游戏品类细分
-    { name: "类魂系列", hours: "500h+", games: "艾尔登法环, 黑暗之魂, 黑神话:悟空" },
-    { name: "竞技对抗", hours: "700h+", games: "王者荣耀, 英雄联盟手游, 皇室战争" },
-    { name: "肉鸽策略", hours: "300h+", games: "杀戮尖塔, 哈迪斯, 梗纪元 (自研)" },
+    { name: "类魂系列", hours: "500h+", games: "艾尔登法环,艾尔登法环-黑夜君临，黑暗之魂,无限机兵， 黑神话:悟空" },
+    { name: "竞技对抗", hours: "700h+", games: "王者荣耀, 三角洲行动，英雄联盟手游, 皇室战争" },
+    { name: "肉鸽策略", hours: "300h+", games: "杀戮尖塔, 哈迪斯,土豆兄弟，吸血鬼幸存者" },
     { name: "开放世界", hours: "600h+", games: "天国拯救, 原神, 森林, 三角洲" }
   ]
 };
@@ -105,18 +105,18 @@ const EXPERIENCE = [
 // 可修改：作品集 Demo
 const DEMOS = [
   {
-    title: "《陷落之地》", // 可修改：项目标题
+    title: "《陷落之地》--腾讯星跃实战营", // 可修改：项目标题
     tag: "战斗框架 Demo", // 可修改：标签
     category: "UE GAS / 类魂战斗", // 可修改：分类
     images: ["/LostLand.png", "https://picsum.photos/seed/fallen2/1200/800", "https://picsum.photos/seed/fallen3/1200/800"], // 可修改：图片链接列表
     video: "#", // 可修改：视频链接
-    description: "基于UE GAS框架，设计并开发一套基于“虚能”为循环资源的类魂战斗框架。包含普通小怪、精英Boss及大体型龙形Boss的AI设计。", // 可修改：描述
-    awards: ["最佳玩法奖", "最佳AI应用奖"], // 可修改：奖项
+    description: "基于UE GAS框架，设计并开发一套基于“虚能”为循环资源的类魂战斗框架。包含普通小怪、精英Boss及大体型龙形Boss的AI设计与实现。", // 可修改：描述
+    //awards: ["类魂", "GAS", "BOSS战"], // 可修改：奖项
     tech: ["UE5", "GAS", "行为树"] // 可修改：技术栈
   },
   {
-    title: "《梗纪元-卡牌战争》",
-    tag: "策略卡牌 Demo",
+    title: "《梗纪元-卡牌战争》--TapTap聚光灯比赛",
+    tag: "策略卡牌 全流程",
     category: "肉鸽 / 词条自定义",
     images: [
       "https://picsum.photos/seed/meme/1200/800", 
@@ -124,12 +124,12 @@ const DEMOS = [
       "https://picsum.photos/seed/meme3/1200/800"
     ],
     video: "#",
-    description: "词条自定义配置的肉鸽卡牌游戏，玩家可自定义局内卡牌词条内容，通过组合与强化获得更强卡组。已上架TapTap。",
+    description: "基于UE GamePlayTags实现的词条自定义配置的肉鸽卡牌游戏，玩家可自定义局内卡牌词条内容，通过组合与强化获得更强卡组。已上架TapTap。",
     awards: ["TapTap 开放试玩"],
     tech: ["UE5", "UI 设计", "系统设计"]
   },
   {
-    title: "《龙舟消消乐》",
+    title: "《龙舟消消乐》——途游游戏AI训练营",
     tag: "轻竞技 Demo",
     category: "AI+游戏训练营",
     images: [
@@ -141,25 +141,54 @@ const DEMOS = [
     description: "面向用户群体设计的轻度竞技消除游戏。通过消除积攒士气并合理释放技能，争取竞赛第一名。",
     awards: ["最佳玩法奖", "最佳AI应用奖"],
     tech: ["AI 训练", "休闲游戏"]
+  },
+  {
+    title: "《灰土大陆》—VR游戏",
+    tag: "VR，RPG",
+    category: "VR / RPG",
+    images: [
+      "https://picsum.photos/seed/vr-game/1200/800",
+      "https://picsum.photos/seed/vr-game2/1200/800",
+      "https://picsum.photos/seed/vr-game3/1200/800"
+    ],
+    video: "#",
+    description: "基于UE开发的一款角色扮演VR游戏Demo,游戏内玩家需要合理使用手中武器，战胜强敌，寻得出路",
+    tech: ["UE5", "VR", "RPG"]
+  },
+  {
+    title: "《道》——2024CiGA Game Jam",
+    tag: "48hGameJam，关卡解密",
+    category: "Game Jam / 解密",
+    images: [
+      "https://picsum.photos/seed/dao/1200/800",
+      "https://picsum.photos/seed/dao2/1200/800",
+      "https://picsum.photos/seed/dao3/1200/800"
+    ],
+    video: "#",
+    description: "将传统文化中五行要素与推箱子要素进行结合设计的一款关卡解密类游戏",
+    awards: ["优秀作品"],
+    tech: ["UE5", "关卡设计", "解密"]
   }
 ];
 
 // 可修改：作品集图片自动轮播间隔（毫秒）
 const CAROUSEL_AUTO_PLAY_INTERVAL = 3000;
 
+// 可修改：Demo 标题字体大小 (Tailwind 类名)
+const DEMO_TITLE_FONT_SIZE = "text-2xl md:text-3xl"; 
+
 // 可修改：教育背景
 const EDUCATION = [
   {
     school: "北京邮电大学", // 可修改：学校名称
-    degree: "硕士 | 设计学 (产品与交互设计)", // 可修改：学位/专业
+    degree: "硕士 | 设计学-AIGC游戏设计", // 可修改：学位/专业
     period: "2024 - 2027", // 可修改：时间段
-    details: "曾担任本科生党支部宣传委员，校学生会主席。" // 可修改：详细描述
   },
   {
     school: "北京邮电大学",
     degree: "本科 | 工业设计 (智能交互设计)",
     period: "2020 - 2024",
-    details: "院志愿者协会部门负责人。"
+    details: "曾担任本科生党支部宣传委员，校学生会主席。院志愿者协会部门负责人。"
   }
 ];
 
@@ -300,7 +329,7 @@ const Hero = () => {
             </p>
             
             <p className="text-base text-zinc-500 max-w-2xl leading-relaxed">
-              我在这里记录我的游戏设计之路。目前专注于 <span className="text-white font-bold">UE5 GAS</span> 架构的学习，以及对 <span className="text-white font-bold">Boss AI</span> 与 <span className="text-white font-bold">动作反馈</span> 的初步探索。
+              我在这里记录我的游戏设计之路。目前专注于 <span className="text-white font-bold">UE5 GAS</span> 架构的学习与实践，以及对 <span className="text-white font-bold">Boss AI</span> 与 <span className="text-white font-bold">动作反馈</span> 的初步探索。
             </p>
 
             {/* Education Quick Info */}
@@ -473,8 +502,8 @@ const DemoSection = ({ onPreview }: { onPreview: () => void }) => {
         <div className="mb-20">
           <h2 className="text-5xl md:text-7xl font-display font-black text-white mb-6 tracking-tighter">
             {/* 可修改：作品集区域标题 */}
-            精选 <br />
-            <span className="text-gradient">作品.</span>
+            个人 <br />
+            <span className="text-gradient">Demo.</span>
           </h2>
           <p className="text-zinc-400 max-w-md text-lg">
             {/* 可修改：作品集区域描述 */}
@@ -509,7 +538,7 @@ const DemoSection = ({ onPreview }: { onPreview: () => void }) => {
                   {/* 可修改：Demo 分类标签 */}
                   <span className="text-[10px] font-black uppercase tracking-[0.4em] text-emerald-500">{demo.category}</span>
                 </div>
-                <h3 className="text-4xl md:text-5xl font-display font-black text-white mb-6 tracking-tighter group-hover:text-emerald-400 transition-colors">
+                <h3 className={`${DEMO_TITLE_FONT_SIZE} font-display font-black text-white mb-6 tracking-tighter group-hover:text-emerald-400 transition-colors`}>
                   {demo.title}
                 </h3>
                 <p className="text-zinc-400 text-lg leading-relaxed mb-8">
@@ -517,7 +546,7 @@ const DemoSection = ({ onPreview }: { onPreview: () => void }) => {
                   {demo.description}
                 </p>
                 <div className={`flex flex-wrap gap-3 mb-10 ${i % 2 === 1 ? 'lg:justify-end' : ''}`}>
-                  {demo.awards.map((a, j) => (
+                  {demo.awards && demo.awards.map((a, j) => (
                     <div key={j} className="flex items-center gap-2 px-4 py-2 bg-zinc-900 border border-white/5 rounded-xl text-xs font-bold text-zinc-300">
                       <Trophy className="w-4 h-4 text-emerald-500" />
                       {a}
@@ -531,7 +560,7 @@ const DemoSection = ({ onPreview }: { onPreview: () => void }) => {
                   </a>
                   <a href="#" className="px-8 py-4 bg-zinc-900 border border-white/10 text-white text-xs font-black uppercase tracking-widest rounded-2xl hover:border-white/30 transition-all flex items-center gap-3">
                     <Download className="w-5 h-5" />
-                    设计文档
+                    下载试玩
                   </a>
                 </div>
               </div>
@@ -955,8 +984,20 @@ const TechStack = () => {
                 whileHover={{ y: -5, scale: 1.1 }}
                 className="flex flex-col items-center gap-4 group"
               >
-                <div className="w-20 h-20 bg-zinc-900/50 border border-white/10 rounded-3xl flex items-center justify-center text-zinc-400 group-hover:text-emerald-500 group-hover:border-emerald-500/30 group-hover:bg-zinc-900 transition-all duration-500 shadow-xl">
-                  {React.cloneElement(skill.icon as React.ReactElement, { className: "w-10 h-10" })}
+                <div className="w-20 h-20 bg-zinc-900/50 border border-white/10 rounded-3xl flex items-center justify-center text-zinc-400 group-hover:text-emerald-500 group-hover:border-emerald-500/30 group-hover:bg-zinc-900 transition-all duration-500 shadow-xl overflow-hidden p-4">
+                  {typeof skill.icon === 'string' ? (
+                    <img 
+                      src={skill.icon} 
+                      alt={skill.name} 
+                      className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                      onError={(e) => {
+                        // 如果图片加载失败（例如还没上传），显示一个占位符或默认图标
+                        (e.target as HTMLImageElement).src = `https://via.placeholder.com/80/18181b/10b981?text=${skill.name.charAt(0)}`;
+                      }}
+                    />
+                  ) : (
+                    React.cloneElement(skill.icon as React.ReactElement, { className: "w-10 h-10" })
+                  )}
                 </div>
                 <div className="text-center">
                   <p className="text-xs font-black text-white uppercase tracking-tight">{skill.name}</p>
