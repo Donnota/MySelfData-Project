@@ -18,6 +18,7 @@ import {
   Linkedin, 
   Mail, 
   ChevronRight,
+  ChevronLeft,
   Menu,
   X,
   Layers,
@@ -39,38 +40,39 @@ import {
 /// --- Data from Resume (可修改：个人基本信息) ---
 const PERSONAL_INFO = {
   name: "刘先胜", // 可修改：姓名
-  role: "游戏策划 (战斗)", // 可修改：职位
+  role: "游戏策划 (战斗) | 2027届硕士在读", // 可修改：职位
   email: "3142568588@qq.com", // 可修改：邮箱
   phone: "17642128621", // 可修改：电话
   location: "北京 / 朝阳", // 可修改：坐标
   resumeUrl: "#", // 可修改：简历 PDF 链接 (用于预览和下载)
   avatarUrl: "https://picsum.photos/seed/liuxiansheng_hero/800/1000", // 可修改：个人头像/首屏大图链接
-  intro: "你好！我是刘先胜，一名深耕于游戏战斗策划与内容设计的求职者。我热衷于通过严谨的逻辑与极致的操作反馈，在虚拟世界中构建令玩家心跳加速的战斗体验。", // 可修改：个人简介
+  globalBgUrl: "https://picsum.photos/seed/game-bg/1920/1080?blur=4", // 可修改：全局背景图片链接
+  intro: "你好！我是先胜。目前正在北邮攻读设计学硕士，专注于游戏战斗策划。我喜欢在严谨的逻辑与直观的反馈之间寻找平衡，希望能为玩家创造一些有趣且难忘的瞬间。", // 可修改：个人简介
   summary: [ // 可修改：核心优势列表
-    "深耕 UE5 引擎，擅长利用 GAS 框架与行为树构建高复杂度的战斗系统与 AI 逻辑。",
-    "具备工业设计背景，能够从交互逻辑与审美双重维度优化游戏内容设计。",
-    "实战经验丰富，曾参与字节跳动 UGC 玩法策划及多款独立游戏 Demo 的全栈开发。"
+    "在 UE5 的世界里不断探索，尝试用 GAS 框架和行为树去实现我脑海中的战斗构思。",
+    "工业设计出身的我，习惯于从交互逻辑出发，去思考如何让游戏内容既好玩又好看。",
+    "珍惜每一次实践机会，在字节跳动的实习和独立 Demo 的开发中，我学到了很多实战经验。"
   ]
 };
 
 // 可修改：软件技能列表
 const SOFTWARE_SKILLS = [
-  { name: "Unreal Engine", icon: <Cpu className="w-6 h-6" />, level: "精通" },
-  { name: "Unity", icon: <Gamepad2 className="w-6 h-6" />, level: "熟练" },
-  { name: "Figma", icon: <Layers className="w-6 h-6" />, level: "熟练" },
-  { name: "Axure", icon: <ScrollText className="w-6 h-6" />, level: "熟练" },
-  { name: "Blender", icon: <Box className="w-6 h-6" />, level: "掌握" }
+  { name: "Unreal Engine", icon: <Cpu className="w-6 h-6" />, level: "掌握" },
+  { name: "Unity", icon: <Gamepad2 className="w-6 h-6" />, level: "熟悉" },
+  { name: "Figma", icon: <Layers className="w-6 h-6" />, level: "掌握" },
+  { name: "Axure", icon: <ScrollText className="w-6 h-6" />, level: "掌握" },
+  { name: "Blender", icon: <Box className="w-6 h-6" />, level: "熟悉" }
 ];
 
 // 可修改：游戏经历总结
 const GAME_EXPERIENCE = {
   totalHours: "3000+", // 可修改：总时长
-  summary: "深度的硬核玩家背景，涵盖魂类、MOBA、Roguelike 及开放世界等多种品类。擅长从玩家痛点出发，反推关卡设计与战斗逻辑。", // 可修改：总结文案
+  summary: "我是一个深度的硬核游戏爱好者。从魂系的受难到 MOBA 的博弈，这些经历塑造了我对游戏节奏的理解。我喜欢拆解那些让我心动的瞬间，并尝试将它们转化为设计语言。", // 可修改：总结文案
   categories: [ // 可修改：游戏品类细分
-    { name: "类魂", hours: "500h+", games: "艾尔登法环 (8周目全成就), 黑暗之魂 (8周目全成就), 黑神话:悟空" },
-    { name: "MOBA / 竞技", hours: "700h+", games: "王者荣耀 (荣耀王者), 英雄联盟手游 (大师), 皇室战争 (8000杯)" },
-    { name: "Roguelike / 策略", hours: "300h+", games: "杀戮尖塔, 哈迪斯, 梗纪元 (自研), 盗贼遗产" },
-    { name: "沉浸式 / 开放世界", hours: "600h+", games: "天国拯救, 原神 (开服玩家), 森林, 三角洲" }
+    { name: "类魂系列", hours: "500h+", games: "艾尔登法环, 黑暗之魂, 黑神话:悟空" },
+    { name: "竞技对抗", hours: "700h+", games: "王者荣耀, 英雄联盟手游, 皇室战争" },
+    { name: "肉鸽策略", hours: "300h+", games: "杀戮尖塔, 哈迪斯, 梗纪元 (自研)" },
+    { name: "开放世界", hours: "600h+", games: "天国拯救, 原神, 森林, 三角洲" }
   ]
 };
 
@@ -106,7 +108,7 @@ const DEMOS = [
     title: "《陷落之地》", // 可修改：项目标题
     tag: "战斗框架 Demo", // 可修改：标签
     category: "UE GAS / 类魂战斗", // 可修改：分类
-    image: "https://picsum.photos/seed/fallen/1200/800", // 可修改：图片链接
+    images: ["/LostLand.png", "https://picsum.photos/seed/fallen2/1200/800", "https://picsum.photos/seed/fallen3/1200/800"], // 可修改：图片链接列表
     video: "#", // 可修改：视频链接
     description: "基于UE GAS框架，设计并开发一套基于“虚能”为循环资源的类魂战斗框架。包含普通小怪、精英Boss及大体型龙形Boss的AI设计。", // 可修改：描述
     awards: ["最佳玩法奖", "最佳AI应用奖"], // 可修改：奖项
@@ -116,7 +118,11 @@ const DEMOS = [
     title: "《梗纪元-卡牌战争》",
     tag: "策略卡牌 Demo",
     category: "肉鸽 / 词条自定义",
-    image: "https://picsum.photos/seed/meme/1200/800",
+    images: [
+      "https://picsum.photos/seed/meme/1200/800", 
+      "https://picsum.photos/seed/meme2/1200/800",
+      "https://picsum.photos/seed/meme3/1200/800"
+    ],
     video: "#",
     description: "词条自定义配置的肉鸽卡牌游戏，玩家可自定义局内卡牌词条内容，通过组合与强化获得更强卡组。已上架TapTap。",
     awards: ["TapTap 开放试玩"],
@@ -126,13 +132,20 @@ const DEMOS = [
     title: "《龙舟消消乐》",
     tag: "轻竞技 Demo",
     category: "AI+游戏训练营",
-    image: "https://picsum.photos/seed/dragon/1200/800",
+    images: [
+      "https://picsum.photos/seed/dragon/1200/800",
+      "https://picsum.photos/seed/dragon2/1200/800",
+      "https://picsum.photos/seed/dragon3/1200/800"
+    ],
     video: "#",
     description: "面向用户群体设计的轻度竞技消除游戏。通过消除积攒士气并合理释放技能，争取竞赛第一名。",
     awards: ["最佳玩法奖", "最佳AI应用奖"],
     tech: ["AI 训练", "休闲游戏"]
   }
 ];
+
+// 可修改：作品集图片自动轮播间隔（毫秒）
+const CAROUSEL_AUTO_PLAY_INTERVAL = 3000;
 
 // 可修改：教育背景
 const EDUCATION = [
@@ -211,8 +224,8 @@ const Navbar = ({ onPreview }: { onPreview: () => void }) => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-zinc-950/80 backdrop-blur-xl border-b border-white/5 py-4' : 'bg-transparent py-8'}`}>
       <div className="max-w-7xl mx-auto px-8 flex justify-between items-center">
-        <a href="#" className="text-2xl font-display font-black tracking-tighter text-white group">
-          LIU<span className="text-emerald-500 group-hover:text-cyan-400 transition-colors">.DESIGN</span>
+        <a href="#" className="text-xl font-display font-black tracking-tighter text-white group">
+          XIAN<span className="text-emerald-500 group-hover:text-cyan-400 transition-colors">SHENG</span>
         </a>
         <div className="hidden md:flex items-center gap-6">
           {[
@@ -250,59 +263,73 @@ const Navbar = ({ onPreview }: { onPreview: () => void }) => {
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background Elements */}
+    <section className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
+      {/* Background Elements - Subtle Grid & Atmospheric Glow */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_40%,#10b98115,transparent_60%)]" />
-        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-emerald-500/10 blur-[120px] rounded-full animate-pulse" />
-        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-cyan-500/10 blur-[120px] rounded-full animate-pulse" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_40%,#10b98105,transparent_60%)]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-8 w-full grid lg:grid-cols-[1.2fr_0.8fr] gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-8 w-full grid lg:grid-cols-[1.2fr_0.8fr] gap-16 items-center">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="inline-flex items-center gap-3 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-10">
-            <span className="w-2 h-2 bg-emerald-500 rounded-full animate-ping" />
-            {/* 可修改：首屏状态标签文本 */}
-            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-400">寻找 2026 暑期实习</span>
+          <div className="flex items-center gap-4 mb-10">
+            <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-emerald-500/30 p-1 bg-zinc-900 lg:hidden shadow-lg shadow-emerald-500/20">
+              <img src={PERSONAL_INFO.avatarUrl} alt={PERSONAL_INFO.name} className="w-full h-full object-cover rounded-xl" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-display font-black text-white tracking-tight">{PERSONAL_INFO.name}</h2>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+                <p className="text-emerald-400 font-bold text-[10px] tracking-[0.3em] uppercase">{PERSONAL_INFO.role}</p>
+              </div>
+            </div>
           </div>
-          <h1 className="text-7xl md:text-9xl font-display font-black text-white leading-[0.85] mb-10 tracking-tighter">
-            战斗 <br />
-            <span className="text-gradient">策划.</span>
+
+          <h1 className="text-6xl md:text-8xl font-display font-black text-white leading-[0.9] mb-10 tracking-tighter">
+            你好，<br />
+            我是 <span className="text-gradient">先胜.</span>
           </h1>
-          <div className="space-y-6 mb-12">
-            <p className="text-2xl text-white font-bold tracking-tight">
+
+          <div className="space-y-8 mb-12">
+            <p className="text-xl text-zinc-300 leading-relaxed max-w-2xl font-medium">
               {PERSONAL_INFO.intro}
             </p>
-            <p className="text-lg text-zinc-400 max-w-2xl leading-relaxed font-medium">
-              {/* 可修改：Hero 区域描述文案 */}
-              作为一名战斗策划，我专注于<span className="text-emerald-400">打击感调优</span>、<span className="text-emerald-400">技能系统架构</span>以及<span className="text-emerald-400">高挑战性 AI 设计</span>。我主张“设计服务于体验”，通过数据驱动与感官反馈的结合，定义每一帧的精彩。
+            
+            <p className="text-base text-zinc-500 max-w-2xl leading-relaxed">
+              我在这里记录我的游戏设计之路。目前专注于 <span className="text-white font-bold">UE5 GAS</span> 架构的学习，以及对 <span className="text-white font-bold">Boss AI</span> 与 <span className="text-white font-bold">动作反馈</span> 的初步探索。
             </p>
+
+            {/* Education Quick Info */}
+            <div className="grid sm:grid-cols-2 gap-6 pt-8 border-t border-white/10">
+              {EDUCATION.map((edu, idx) => (
+                <div key={idx} className="flex items-start gap-4 group">
+                  <div className="mt-1 p-2.5 bg-zinc-900/50 rounded-xl border border-white/10 group-hover:border-emerald-500/50 transition-all duration-500">
+                    <BookOpen className="w-4 h-4 text-emerald-500" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-black text-white tracking-tight">{edu.school}</p>
+                    <p className="text-[11px] text-zinc-400 font-bold mt-0.5">{edu.degree}</p>
+                    <p className="text-[10px] text-zinc-600 font-mono mt-1">{edu.period}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Software Skills Tags */}
-          <div className="flex flex-wrap gap-3 mb-12">
-            {SOFTWARE_SKILLS.map(skill => (
-              <span key={skill.name} className="px-4 py-2 bg-zinc-900 border border-white/5 rounded-xl text-xs font-bold text-zinc-300 hover:border-emerald-500/50 transition-colors">
-                {skill.name}
-              </span>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap gap-6">
-            <a href="#demos" className="px-10 py-5 bg-emerald-600 text-white font-black uppercase tracking-widest rounded-2xl hover:bg-emerald-500 transition-all shadow-2xl shadow-emerald-900/40 flex items-center gap-3 group">
-              {/* 可修改：主操作按钮文本 */}
+          <div className="flex flex-wrap gap-6 items-center">
+            <a href="#demos" className="px-12 py-6 bg-emerald-600 text-white font-black uppercase tracking-[0.2em] text-xs rounded-2xl hover:bg-emerald-500 transition-all shadow-2xl shadow-emerald-900/40 flex items-center gap-4 group">
               浏览作品
               <PlayCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
             </a>
             <div className="flex items-center gap-4">
-              <a href={`mailto:${PERSONAL_INFO.email}`} className="p-4 bg-zinc-900 border border-white/5 rounded-2xl text-zinc-400 hover:text-white hover:border-white/20 transition-all">
+              <a href={`mailto:${PERSONAL_INFO.email}`} className="p-5 bg-zinc-900/50 backdrop-blur-md border border-white/10 rounded-2xl text-zinc-400 hover:text-white hover:border-emerald-500/50 transition-all" title="Email">
                 <Mail className="w-6 h-6" />
               </a>
-              <a href={`tel:${PERSONAL_INFO.phone}`} className="p-4 bg-zinc-900 border border-white/5 rounded-2xl text-zinc-400 hover:text-white hover:border-white/20 transition-all">
+              <a href={`tel:${PERSONAL_INFO.phone}`} className="p-5 bg-zinc-900/50 backdrop-blur-md border border-white/10 rounded-2xl text-zinc-400 hover:text-white hover:border-emerald-500/50 transition-all" title="Phone">
                 <Phone className="w-6 h-6" />
               </a>
             </div>
@@ -310,49 +337,138 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="relative hidden lg:block"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
+          className="relative"
+          initial={{ opacity: 0, scale: 0.9, x: 40 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="relative z-10 aspect-[4/5] rounded-[60px] overflow-hidden border border-white/10 p-2 bg-zinc-900/50 backdrop-blur-3xl glow-emerald">
+          <div className="relative z-10 aspect-[4/5] rounded-[40px] overflow-hidden border border-white/5 p-1 bg-zinc-900/20 backdrop-blur-3xl shadow-2xl shadow-black/50 group">
             <img 
               src={PERSONAL_INFO.avatarUrl} 
               alt={PERSONAL_INFO.name} 
-              className="w-full h-full object-cover rounded-[50px] grayscale hover:grayscale-0 transition-all duration-1000"
+              className="w-full h-full object-cover rounded-[36px] transition-all duration-1000 scale-105 group-hover:scale-100"
               referrerPolicy="no-referrer"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
           </div>
-          {/* Floating Bento Card */}
+          
+          {/* Floating Stats Card */}
           <motion.div 
-            className="absolute -bottom-10 -left-10 glass-card p-8 rounded-[40px] z-20 max-w-[280px]"
-            animate={{ y: [0, -15, 0] }}
+            className="absolute -bottom-6 -left-6 glass-card p-6 rounded-[24px] z-20 border border-white/5 shadow-2xl shadow-black/50"
+            animate={{ y: [0, -8, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
-            <div className="flex items-center gap-5 mb-4">
-              <div className="w-14 h-14 bg-emerald-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-emerald-500/40">
-                <Cpu className="w-7 h-7" />
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-emerald-500/10 border border-emerald-500/20 rounded-xl flex items-center justify-center text-emerald-500 shadow-lg shadow-emerald-500/10">
+                <Sword className="w-6 h-6" />
               </div>
               <div>
-                {/* 可修改：悬浮卡片标题 */}
-                <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500">核心领域</p>
-                <p className="text-xl font-black text-white">战斗 & AI</p>
+                <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500">Focus</p>
+                <p className="text-base font-black text-white tracking-tight">Game Design</p>
               </div>
             </div>
-            <p className="text-xs text-zinc-400 leading-relaxed">
-              {/* 可修改：悬浮卡片描述 */}
-              擅长利用 UE GAS 框架构建具有深度打击感与策略性的战斗体验。
-            </p>
           </motion.div>
+
+          {/* Background Decorative Circles */}
+          <div className="absolute -top-12 -right-12 w-48 h-48 border border-emerald-500/10 rounded-full -z-10 animate-pulse" />
+          <div className="absolute -bottom-24 -right-24 w-72 h-72 border border-white/5 rounded-full -z-10" />
         </motion.div>
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.div 
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white">Scroll</span>
+        <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent" />
+      </motion.div>
     </section>
   );
 };
 
-const DemoSection = () => {
+const ImageCarousel = ({ images, title }: { images: string[], title: string }) => {
+  const [index, setIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    if (images.length <= 1 || isHovered) return;
+
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, CAROUSEL_AUTO_PLAY_INTERVAL);
+
+    return () => clearInterval(timer);
+  }, [images.length, isHovered]);
+
+  if (images.length <= 1) {
+    return (
+      <div className="relative aspect-video rounded-[40px] overflow-hidden border border-white/10">
+        <img 
+          src={images[0]} 
+          alt={title} 
+          className="w-full h-full object-cover"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+    );
+  }
+
   return (
-    <section id="demos" className="py-32 bg-zinc-950">
+    <div 
+      className="relative aspect-video rounded-[40px] overflow-hidden border border-white/10 group/carousel"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={index}
+          src={images[index]}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className="absolute inset-0 w-full h-full object-cover"
+          referrerPolicy="no-referrer"
+        />
+      </AnimatePresence>
+      
+      <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/40 to-transparent pointer-events-none" />
+
+      {/* Controls */}
+      <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover/carousel:opacity-100 transition-opacity">
+        <button 
+          onClick={(e) => { e.stopPropagation(); setIndex((prev) => (prev - 1 + images.length) % images.length); }}
+          className="p-2 bg-black/50 backdrop-blur-md rounded-full text-white hover:bg-emerald-500 transition-colors"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <button 
+          onClick={(e) => { e.stopPropagation(); setIndex((prev) => (prev + 1) % images.length); }}
+          className="p-2 bg-black/50 backdrop-blur-md rounded-full text-white hover:bg-emerald-500 transition-colors"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+      </div>
+
+      {/* Dots */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
+        {images.map((_, i) => (
+          <button 
+            key={i} 
+            onClick={(e) => { e.stopPropagation(); setIndex(i); }}
+            className={`h-1 rounded-full transition-all duration-300 ${i === index ? 'w-4 bg-emerald-500' : 'w-1 bg-white/30 hover:bg-white/50'}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const DemoSection = ({ onPreview }: { onPreview: () => void }) => {
+  return (
+    <section id="demos" className="py-32 bg-transparent">
       <div className="max-w-7xl mx-auto px-8">
         <div className="mb-20">
           <h2 className="text-5xl md:text-7xl font-display font-black text-white mb-6 tracking-tighter">
@@ -366,7 +482,7 @@ const DemoSection = () => {
           </p>
         </div>
 
-        <div className="space-y-24">
+        <div className="space-y-32">
           {DEMOS.map((demo, i) => (
             <motion.div
               key={demo.title}
@@ -374,19 +490,13 @@ const DemoSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className={`group relative grid lg:grid-cols-2 gap-12 items-center`}
+              className={`group relative grid lg:grid-cols-2 gap-16 items-center`}
             >
-              <div className={`relative aspect-video rounded-[40px] overflow-hidden border border-white/10 ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
-                <img 
-                  src={demo.image} 
-                  alt={demo.title} 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 to-transparent" />
-                <div className="absolute bottom-8 left-8 flex flex-wrap gap-3">
+              <div className={`relative ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
+                <ImageCarousel images={demo.images} title={demo.title} />
+                <div className="absolute -bottom-4 left-8 flex flex-wrap gap-3 pointer-events-none">
                   {demo.tech.map(t => (
-                    <span key={t} className="px-4 py-1.5 bg-black/60 backdrop-blur-xl text-[10px] font-black uppercase tracking-widest text-emerald-400 rounded-full border border-white/10">
+                    <span key={t} className="px-4 py-1.5 bg-black/80 backdrop-blur-xl text-[10px] font-black uppercase tracking-widest text-emerald-400 rounded-full border border-white/10">
                       {t}
                     </span>
                   ))}
@@ -435,68 +545,73 @@ const DemoSection = () => {
 
 const PersonalDossier = () => {
   return (
-    <section id="profile" className="py-32 bg-zinc-950 border-t border-white/5">
+    <section id="profile" className="py-32 bg-transparent border-t border-white/5">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="grid lg:grid-cols-[1fr_1.5fr] gap-20">
+        <div className="grid lg:grid-cols-[1fr_1.5fr] gap-24">
           {/* Left: Character Stats Style */}
           <div className="space-y-12">
             <div>
-              {/* 可修改：个人档案标题 */}
-              <h2 className="text-4xl font-display font-black text-white mb-8 tracking-tighter uppercase">个人 <span className="text-emerald-500">档案.</span></h2>
-              <div className="glass-card p-10 rounded-[40px] space-y-8">
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    {/* 可修改：角色属性标签 */}
-                    <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500 mb-1">职业</p>
-                    <p className="text-white font-bold">战斗策划</p>
-                  </div>
-                  <div>
-                    <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500 mb-1">等级</p>
-                    <p className="text-white font-bold">硕士在读</p>
-                  </div>
-                  <div>
-                    <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500 mb-1">所属</p>
-                    <p className="text-white font-bold">北京邮电大学</p>
-                  </div>
-                  <div>
-                    <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500 mb-1">坐标</p>
-                    <p className="text-white font-bold">北京, 中国</p>
-                  </div>
+              <div className="flex items-center gap-4 mb-10">
+              <div className="w-12 h-12 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-500 border border-emerald-500/20">
+                <User className="w-6 h-6" />
+              </div>
+              <h2 className="text-4xl font-display font-black text-white tracking-tighter uppercase">关于 <span className="text-emerald-500">我.</span></h2>
+              </div>
+              
+              <div className="glass-card p-10 rounded-[40px] space-y-10 border border-white/10 shadow-2xl relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-3xl rounded-full -mr-16 -mt-16 group-hover:bg-emerald-500/10 transition-colors duration-700" />
+                
+                <div className="grid grid-cols-2 gap-8">
+                  {[
+                    { label: "职业", value: "战斗策划", icon: <Sword className="w-3 h-3" /> },
+                    { label: "等级", value: "硕士在读", icon: <Award className="w-3 h-3" /> },
+                    { label: "所属", value: "北京邮电大学", icon: <BookOpen className="w-3 h-3" /> },
+                    { label: "坐标", value: "北京, 中国", icon: <Phone className="w-3 h-3" /> }
+                  ].map((stat, idx) => (
+                    <div key={idx} className="space-y-1">
+                      <div className="flex items-center gap-2">
+                        <span className="text-emerald-500">{stat.icon}</span>
+                        <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500">{stat.label}</p>
+                      </div>
+                      <p className="text-white font-black tracking-tight">{stat.value}</p>
+                    </div>
+                  ))}
                 </div>
                 
-                <div className="pt-8 border-t border-white/5">
-                  {/* 可修改：证书部分标题 */}
-                  <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500 mb-4">资质证书</p>
+                <div className="pt-10 border-t border-white/5">
+                  <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500 mb-6 flex items-center gap-3">
+                    <ScrollText className="w-3 h-3" />
+                    资质证书
+                  </p>
                   <div className="flex flex-wrap gap-3">
-                    {/* 可修改：具体证书名称 */}
-                    <span className="px-3 py-1.5 bg-zinc-950 border border-white/10 rounded-lg text-[10px] font-bold text-zinc-300">CET-4</span>
-                    <span className="px-3 py-1.5 bg-zinc-950 border border-white/10 rounded-lg text-[10px] font-bold text-zinc-300">普通话二甲</span>
+                    {["CET-4", "普通话二甲", "UE5 开发认证"].map((cert) => (
+                      <span key={cert} className="px-4 py-2 bg-zinc-950/50 border border-white/10 rounded-xl text-[10px] font-black text-zinc-300 hover:border-emerald-500/50 hover:text-white transition-all cursor-default">
+                        {cert}
+                      </span>
+                    ))}
                   </div>
                 </div>
 
-                <div className="pt-8 border-t border-white/5">
-                  {/* 可修改：社会实践标题 */}
-                  <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500 mb-4">社会实践</p>
-                  <div className="space-y-4">
-                    <div className="flex gap-4">
-                      <div className="w-10 h-10 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-500 flex-shrink-0">
-                        <Trophy className="w-5 h-5" />
+                <div className="pt-10 border-t border-white/5">
+                  <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500 mb-6 flex items-center gap-3">
+                    <Activity className="w-3 h-3" />
+                    社会实践
+                  </p>
+                  <div className="space-y-6">
+                    {[
+                      { title: "冬奥会志愿者保障服务", role: "分组负责人 | 优秀志愿者标兵", icon: <Trophy className="w-5 h-5" /> },
+                      { title: "校学生会主席团成员", role: "分管宣传部 | 活动策划与主持", icon: <User className="w-5 h-5" /> }
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex gap-5 group/item">
+                        <div className="w-12 h-12 bg-zinc-900/50 border border-white/5 rounded-2xl flex items-center justify-center text-emerald-500 flex-shrink-0 group-hover/item:border-emerald-500/30 transition-all duration-500">
+                          {item.icon}
+                        </div>
+                        <div>
+                          <p className="text-sm font-black text-white group-hover/item:text-emerald-400 transition-colors">{item.title}</p>
+                          <p className="text-[11px] text-zinc-500 font-bold mt-1">{item.role}</p>
+                        </div>
                       </div>
-                      <div>
-                        {/* 可修改：实践项目名称与角色 */}
-                        <p className="text-xs font-bold text-white">冬奥会志愿者保障服务</p>
-                        <p className="text-[10px] text-zinc-500">分组负责人 | 优秀志愿者标兵</p>
-                      </div>
-                    </div>
-                    <div className="flex gap-4">
-                      <div className="w-10 h-10 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-500 flex-shrink-0">
-                        <User className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <p className="text-xs font-bold text-white">校学生会主席团成员</p>
-                        <p className="text-[10px] text-zinc-500">分管宣传部 | 活动策划与主持</p>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -504,59 +619,56 @@ const PersonalDossier = () => {
           </div>
 
           {/* Right: Detailed Advantages & Philosophy */}
-          <div className="space-y-16">
+          <div className="space-y-20">
             <div>
-              <h3 className="text-2xl font-display font-black text-white mb-10 tracking-widest uppercase flex items-center gap-4">
-                <span className="w-8 h-[2px] bg-emerald-500" />
-                {/* 可修改：优势部分标题 */}
-                个人优势
+              <h3 className="text-2xl font-display font-black text-white mb-12 tracking-widest uppercase flex items-center gap-5">
+                <span className="w-12 h-[2px] bg-emerald-500" />
+                我的关注
               </h3>
               <div className="grid md:grid-cols-2 gap-8">
                 {[
                   {
-                    title: "技术实现能力", // 可修改：优势标题
-                    desc: "熟练使用 UE 引擎进行玩法开发，能高效将创意转化为可运行的功能模块。", // 可修改：优势描述
-                    icon: <Cpu className="w-6 h-6" />
+                    title: "技术探索",
+                    desc: "在 UE5 GAS 架构的学习中，尝试实现从动作逻辑到 AI 行为树的完整战斗流程。",
+                    icon: <Cpu className="w-7 h-7" />
                   },
                   {
-                    title: "玩家视角洞察",
-                    desc: "深入的游戏理解，能结合玩家视角与策划逻辑，快速验证和迭代功能设计。",
-                    icon: <Target className="w-6 h-6" />
+                    title: "反馈调优",
+                    desc: "对动作反馈、顿帧等细节保持好奇，努力在每一帧中寻找更好的物理反馈与操作手感。",
+                    icon: <Sword className="w-7 h-7" />
                   },
                   {
-                    title: "持续学习自驱",
-                    desc: "始终保持对行业趋势与技术发展的关注，积极提升专业水平以适应项目需求。",
-                    icon: <Zap className="w-6 h-6" />
+                    title: "设计应用",
+                    desc: "结合工业设计背景，尝试从用户认知维度去思考 UI 交互与战斗动线的合理性。",
+                    icon: <Layers className="w-7 h-7" />
                   },
                   {
-                    title: "跨学科背景",
-                    desc: "工业设计与交互设计背景，具备优秀的审美能力与用户体验思维。",
-                    icon: <Layers className="w-6 h-6" />
+                    title: "玩家视角",
+                    desc: "作为一名长期玩家，我习惯于站在玩家的角度去审视玩法机制，寻找那些真正动人的瞬间。",
+                    icon: <Gamepad2 className="w-7 h-7" />
                   }
                 ].map((item, i) => (
                   <motion.div 
                     key={i}
-                    whileHover={{ y: -5 }}
-                    className="p-8 bg-zinc-900/30 border border-white/5 rounded-[32px] hover:border-emerald-500/30 transition-all"
+                    whileHover={{ y: -8, scale: 1.02 }}
+                    className="p-10 bg-zinc-900/20 backdrop-blur-sm border border-white/5 rounded-[40px] hover:border-emerald-500/20 hover:bg-zinc-900/40 transition-all duration-500 group"
                   >
-                    <div className="text-emerald-500 mb-6">{item.icon}</div>
-                    <h4 className="text-lg font-bold text-white mb-3">{item.title}</h4>
-                    <p className="text-sm text-zinc-400 leading-relaxed">{item.desc}</p>
+                    <div className="text-emerald-500/80 mb-8 group-hover:scale-110 transition-transform duration-500">{item.icon}</div>
+                    <h4 className="text-xl font-black text-white mb-4 tracking-tight">{item.title}</h4>
+                    <p className="text-sm text-zinc-500 leading-relaxed font-medium">{item.desc}</p>
                   </motion.div>
                 ))}
               </div>
             </div>
 
-            <div className="p-12 bg-gradient-to-br from-emerald-600 to-cyan-700 rounded-[50px] text-white relative overflow-hidden">
+            <div className="p-16 bg-zinc-900/40 backdrop-blur-xl border border-white/5 rounded-[60px] text-white relative overflow-hidden group">
               <div className="relative z-10">
-                {/* 可修改：设计哲学标题 */}
-                <h3 className="text-3xl font-display font-black mb-6 tracking-tighter">设计哲学.</h3>
-                <p className="text-emerald-50 text-xl leading-relaxed font-medium italic">
-                  {/* 可修改：设计哲学引用文案 */}
-                  "我相信优秀的战斗设计不仅仅是数值的堆砌，更是动作、特效、音效与操作反馈的完美共振。我追求的是那种让玩家在每一帧操作中都能感受到‘掌控感’与‘打击感’的极致体验。"
+                <h3 className="text-4xl font-display font-black mb-8 tracking-tighter">一点想法.</h3>
+                <p className="text-zinc-300 text-2xl leading-tight font-medium italic tracking-tight">
+                  “我始终觉得，好的战斗设计不只是数值的计算，更是情绪的传递。我希望通过不断的学习和尝试，能让玩家在操作中感受到那种纯粹的‘掌控感’。”
                 </p>
               </div>
-              <Gamepad2 className="absolute -bottom-10 -right-10 w-64 h-64 text-white/10 rotate-12" />
+              <Gamepad2 className="absolute -bottom-16 -right-16 w-80 h-80 text-white/5 rotate-12 group-hover:rotate-0 transition-transform duration-1000" />
             </div>
           </div>
         </div>
@@ -567,55 +679,69 @@ const PersonalDossier = () => {
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="py-32 bg-zinc-950 relative overflow-hidden">
+    <section id="experience" className="py-32 bg-transparent relative overflow-hidden">
+      <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent -z-10" />
       <div className="max-w-7xl mx-auto px-8">
         <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-24">
           <div>
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-8">
+              <Briefcase className="w-4 h-4 text-emerald-500" />
+              <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-400">Practice & Growth</span>
+            </div>
             <h2 className="text-5xl md:text-7xl font-display font-black text-white mb-10 tracking-tighter">
-              {/* 可修改：历程区域标题 */}
-              职业 <br />
-              <span className="text-gradient">历程.</span>
+              实践 <br />
+              <span className="text-gradient">成长.</span>
             </h2>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-12">
-              {/* 可修改：历程区域描述 */}
-              从 UGC 玩法到核心战斗策划，我在不同的项目中磨练了对游戏节奏与玩家反馈的敏锐洞察。
+            <p className="text-zinc-500 text-xl leading-relaxed mb-12 font-medium">
+              在校园与实习的交替中，我尝试将所学应用到实际项目中，在实践中慢慢成长。
             </p>
             <div className="space-y-6">
               {EDUCATION.map((edu, i) => (
-                <div key={i} className="p-8 bg-zinc-900/50 border border-white/5 rounded-3xl">
-                  <div className="flex items-center gap-4 mb-4">
-                    <BookOpen className="text-emerald-500" />
-                    <h3 className="font-black text-white">{edu.school}</h3>
+                <div key={i} className="p-8 bg-zinc-900/40 backdrop-blur-md border border-white/10 rounded-[32px] hover:border-emerald-500/30 transition-all duration-500 group">
+                  <div className="flex items-center gap-5 mb-5">
+                    <div className="w-12 h-12 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-500 border border-emerald-500/20 group-hover:scale-110 transition-transform">
+                      <BookOpen className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-black text-white text-lg tracking-tight">{edu.school}</h3>
+                      <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500">{edu.period}</p>
+                    </div>
                   </div>
-                  <p className="text-sm text-zinc-400 mb-2 font-medium">{edu.degree}</p>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-zinc-600">{edu.period}</p>
+                  <p className="text-sm text-zinc-300 font-bold mb-3">{edu.degree}</p>
+                  <p className="text-xs text-zinc-500 leading-relaxed">{edu.details}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-16 relative">
+            <div className="absolute left-[23px] top-8 bottom-8 w-[2px] bg-gradient-to-b from-emerald-500/50 via-emerald-500/20 to-transparent" />
+            
             {EXPERIENCE.map((exp, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="relative pl-12 border-l border-white/10"
+                transition={{ duration: 0.8, delay: i * 0.2 }}
+                className="relative pl-20 group"
               >
-                <div className="absolute -left-6 top-0 w-12 h-12 bg-zinc-900 border border-white/10 rounded-2xl flex items-center justify-center text-emerald-500 shadow-2xl">
+                <div className="absolute left-0 top-0 w-12 h-12 bg-zinc-900 border-2 border-emerald-500/30 rounded-2xl flex items-center justify-center text-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.2)] group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500 z-10">
                   {exp.icon}
                 </div>
-                <div className="mb-4">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-zinc-500 mb-2 block">{exp.period}</span>
-                  <h3 className="text-3xl font-display font-black text-white mb-2">{exp.company}</h3>
-                  <p className="text-emerald-500 font-black uppercase tracking-widest text-xs">{exp.role}</p>
+                <div className="mb-6">
+                  <div className="flex items-center gap-4 mb-2">
+                    <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-500">{exp.period}</span>
+                    <div className="h-[1px] flex-grow bg-white/5" />
+                  </div>
+                  <h3 className="text-4xl font-display font-black text-white mb-2 tracking-tighter group-hover:text-emerald-400 transition-colors">{exp.company}</h3>
+                  <p className="text-emerald-500 font-black uppercase tracking-[0.2em] text-xs">{exp.role}</p>
                 </div>
-                <ul className="space-y-4">
+                <ul className="space-y-5">
                   {exp.content.map((item, j) => (
-                    <li key={j} className="text-zinc-400 text-sm leading-relaxed flex gap-4">
-                      <span className="text-emerald-500 mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" />
-                      {item}
+                    <li key={j} className="text-zinc-400 text-base leading-relaxed flex gap-5 group/item">
+                      <span className="text-emerald-500 mt-2 w-2 h-2 rounded-full flex-shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.5)] group-hover/item:scale-125 transition-transform" />
+                      <span className="group-hover/item:text-zinc-200 transition-colors">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -630,35 +756,44 @@ const ExperienceSection = () => {
 
 const AwardsBento = () => {
   return (
-    <section className="py-32 bg-zinc-950">
+    <section className="py-32 bg-black/20 backdrop-blur-sm border-y border-white/5 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/5 blur-[120px] rounded-full -mr-48 -mt-48" />
       <div className="max-w-7xl mx-auto px-8">
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="md:col-span-2 glass-card p-12 rounded-[50px] flex flex-col justify-between">
-            <div>
-              {/* 可修改：荣誉区域标题 */}
-              <h3 className="text-4xl font-display font-black text-white mb-6 tracking-tighter">设计荣誉.</h3>
-              <p className="text-zinc-400 text-lg max-w-md mb-10">
-                {/* 可修改：荣誉区域描述 */}
-                荣获多项国际设计大奖，证明了我在交互逻辑与视觉传达上的专业水准。
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="md:col-span-2 glass-card p-16 rounded-[60px] flex flex-col justify-between border border-white/10 shadow-2xl relative overflow-hidden group">
+            <div className="relative z-10">
+              <div className="inline-flex items-center gap-3 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-8">
+                <Trophy className="w-4 h-4 text-emerald-500" />
+                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-400">Learning & Recognition</span>
+              </div>
+              <h3 className="text-5xl md:text-6xl font-display font-black text-white mb-8 tracking-tighter">学习认可.</h3>
+              <p className="text-zinc-400 text-xl max-w-lg mb-12 font-medium leading-relaxed">
+                在学期间获得的设计奖项，是对我在交互逻辑、视觉传达以及系统设计初步探索的肯定。
               </p>
             </div>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 relative z-10">
               {AWARDS.map((award, i) => (
-                <div key={i} className="px-6 py-3 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-3 text-sm font-bold text-white">
-                  {award.icon}
+                <motion.div 
+                  key={i} 
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="px-8 py-4 bg-zinc-900/50 backdrop-blur-md border border-white/10 rounded-2xl flex items-center gap-4 text-sm font-black text-white group/award"
+                >
+                  <div className="text-emerald-500 group-hover/award:scale-110 transition-transform">{award.icon}</div>
                   {award.name}
-                </div>
+                </motion.div>
               ))}
             </div>
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-emerald-500/5 blur-3xl rounded-full -mr-32 -mb-32 group-hover:bg-emerald-500/10 transition-colors duration-700" />
           </div>
-          <div className="bg-emerald-600 p-12 rounded-[50px] flex flex-col justify-between text-white group overflow-hidden relative">
+          <div className="bg-zinc-900/40 backdrop-blur-md p-16 rounded-[60px] flex flex-col justify-between text-white group overflow-hidden relative border border-white/5 shadow-2xl">
             <div className="relative z-10">
-              <Trophy className="w-16 h-16 mb-8 group-hover:scale-110 transition-transform" />
-              {/* 可修改：重点荣誉标题 */}
-              <h3 className="text-3xl font-display font-black leading-tight mb-4 tracking-tighter">红点奖 <br />BEST OF THE BEST.</h3>
-              <p className="text-emerald-100 text-sm font-medium">顶级设计荣誉，见证创意的极致表达。</p>
+              <div className="w-20 h-20 bg-emerald-500/10 backdrop-blur-md rounded-[32px] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-700 border border-emerald-500/20">
+                <Trophy className="w-10 h-10 text-emerald-500" />
+              </div>
+              <h3 className="text-4xl font-display font-black leading-[0.9] mb-6 tracking-tighter">红点奖 <br /><span className="text-emerald-500">BEST OF THE BEST.</span></h3>
+              <p className="text-zinc-400 text-base font-medium leading-relaxed">一次对创意的认可，也是我设计之路上的重要里程碑。</p>
             </div>
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 blur-3xl rounded-full" />
+            <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-emerald-500/5 blur-[100px] rounded-full group-hover:scale-125 transition-transform duration-1000" />
           </div>
         </div>
       </div>
@@ -668,44 +803,48 @@ const AwardsBento = () => {
 
 const Contact = ({ onPreview }: { onPreview: () => void }) => {
   return (
-    <section id="contact" className="py-32 bg-zinc-950">
-      <div className="max-w-5xl mx-auto px-8 text-center">
+    <section id="contact" className="py-40 bg-transparent relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#10b98108,transparent_70%)]" />
+      <div className="max-w-5xl mx-auto px-8 text-center relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h2 className="text-6xl md:text-8xl font-display font-black text-white mb-10 tracking-tighter">
-            {/* 可修改：联系区域标题 */}
-            准备好一起 <br />
-            <span className="text-gradient">升级了吗？</span>
+          <div className="inline-flex items-center gap-3 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-12">
+            <Zap className="w-4 h-4 text-emerald-500" />
+            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-400">Get In Touch</span>
+          </div>
+          <h2 className="text-7xl md:text-[100px] font-display font-black text-white mb-12 tracking-tighter leading-[0.9]">
+            期待与你 <br />
+            <span className="text-gradient">交流.</span>
           </h2>
-          <p className="text-xl text-zinc-400 mb-16 max-w-2xl mx-auto font-medium">
-            {/* 可修改：底部联系区域描述文案 */}
-            我正在寻找 2026 年暑期游戏策划实习机会。如果你需要一位热爱战斗系统、擅长 AI 逻辑且具备扎实开发能力的策划，请随时联系我。
+          <p className="text-xl text-zinc-500 mb-20 max-w-3xl mx-auto font-medium leading-relaxed">
+            我正在寻找 <span className="text-white font-bold">2026 年暑期游戏策划实习机会</span>。如果你正在寻找一位热爱游戏、愿意在战斗系统与 AI 逻辑领域深耕的伙伴，请随时联系我。
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-8">
             <a 
               href={`mailto:${PERSONAL_INFO.email}`}
-              className="px-12 py-6 bg-white text-black text-lg font-black uppercase tracking-widest rounded-[30px] hover:bg-emerald-500 hover:text-white transition-all shadow-2xl shadow-white/5"
+              className="w-full md:w-auto px-16 py-8 bg-white text-black text-lg font-black uppercase tracking-[0.2em] rounded-[32px] hover:bg-emerald-500 hover:text-white transition-all shadow-2xl shadow-white/10 flex items-center justify-center gap-4 group"
             >
-              {/* 可修改：联系按钮文本 */}
               发送邮件
+              <ChevronRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
             </a>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-6 w-full md:w-auto">
               <button 
                 onClick={onPreview}
-                className="px-10 py-6 bg-zinc-900 border border-white/10 text-white text-lg font-black uppercase tracking-widest rounded-[30px] hover:border-emerald-500 transition-all flex items-center justify-center gap-3"
+                className="px-12 py-8 bg-zinc-900/50 backdrop-blur-xl border border-white/10 text-white text-lg font-black uppercase tracking-[0.2em] rounded-[32px] hover:border-emerald-500 hover:bg-zinc-900 transition-all flex items-center justify-center gap-4 group"
               >
-                <Eye className="w-6 h-6" />
+                <Eye className="w-6 h-6 group-hover:scale-110 transition-transform" />
                 在线预览
               </button>
               <a 
                 href={PERSONAL_INFO.resumeUrl}
                 download
-                className="px-10 py-6 bg-zinc-900 border border-white/10 text-white text-lg font-black uppercase tracking-widest rounded-[30px] hover:border-white/30 transition-all flex items-center justify-center gap-3"
+                className="px-12 py-8 bg-zinc-900/50 backdrop-blur-xl border border-white/10 text-white text-lg font-black uppercase tracking-[0.2em] rounded-[32px] hover:border-white/40 hover:bg-zinc-900 transition-all flex items-center justify-center gap-4 group"
               >
-                <Download className="w-6 h-6" />
+                <Download className="w-6 h-6 group-hover:translate-y-1 transition-transform" />
                 下载简历
               </a>
             </div>
@@ -718,13 +857,13 @@ const Contact = ({ onPreview }: { onPreview: () => void }) => {
 
 const Footer = () => {
   return (
-    <footer className="py-20 bg-zinc-950 border-t border-white/5">
+    <footer className="py-20 bg-black/40 backdrop-blur-xl border-t border-white/5">
       <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-10">
         <div className="text-center md:text-left">
           {/* 可修改：页脚姓名 */}
-          <p className="text-2xl font-display font-black text-white mb-2 tracking-tighter">LIU XIANSHENG</p>
+          <p className="text-xl font-display font-black text-white mb-2 tracking-tighter">先胜</p>
           {/* 可修改：版权年份与文本 */}
-          <p className="text-xs font-bold uppercase tracking-widest text-zinc-600">Game Designer Portfolio © {new Date().getFullYear()}</p>
+          <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-700">Personal Portfolio © {new Date().getFullYear()}</p>
         </div>
         <div className="flex gap-10">
           <a href="#" className="text-zinc-500 hover:text-white transition-colors"><Github className="w-6 h-6" /></a>
@@ -738,25 +877,27 @@ const Footer = () => {
 
 const GamerDNA = () => {
   return (
-    <section className="py-32 bg-zinc-950 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="py-32 bg-black/20 backdrop-blur-md border-t border-white/5 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,#10b98105,transparent_50%)]" />
+      <div className="max-w-7xl mx-auto px-8 relative z-10">
         <div className="grid lg:grid-cols-[1fr_1.5fr] gap-20 items-center">
           <div>
-            {/* 可修改：游戏基因标题 */}
-            <h2 className="text-5xl md:text-7xl font-display font-black text-white mb-8 tracking-tighter uppercase">游戏 <br /><span className="text-gradient">基因.</span></h2>
-            <div className="p-8 bg-zinc-900/50 border border-white/5 rounded-[40px] mb-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-emerald-500/20 rounded-2xl flex items-center justify-center text-emerald-500">
-                  <Clock className="w-6 h-6" />
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-8">
+              <Activity className="w-4 h-4 text-emerald-500" />
+              <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-400">Player Profile</span>
+            </div>
+            <h2 className="text-5xl md:text-7xl font-display font-black text-white mb-8 tracking-tighter uppercase">游戏 <br /><span className="text-gradient">生活.</span></h2>
+            <div className="p-10 bg-zinc-900/20 backdrop-blur-xl border border-white/5 rounded-[40px] mb-8">
+              <div className="flex items-center gap-6 mb-8">
+                <div className="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-500 border border-emerald-500/20">
+                  <Clock className="w-8 h-8" />
                 </div>
                 <div>
-                  {/* 可修改：时长统计标签 */}
-                  <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500">总游玩时长</p>
-                  <p className="text-3xl font-black text-white">{GAME_EXPERIENCE.totalHours} 小时</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500">Playtime</p>
+                  <p className="text-4xl font-black text-white tracking-tighter">{GAME_EXPERIENCE.totalHours} <span className="text-lg text-zinc-600">HRS</span></p>
                 </div>
               </div>
-              <p className="text-zinc-400 leading-relaxed font-medium">
-                {/* 可修改：游戏背景总结 */}
+              <p className="text-zinc-500 leading-relaxed font-medium text-lg">
                 {GAME_EXPERIENCE.summary}
               </p>
             </div>
@@ -766,18 +907,29 @@ const GamerDNA = () => {
             {GAME_EXPERIENCE.categories.map((cat, i) => (
               <motion.div 
                 key={i}
-                whileHover={{ scale: 1.02 }}
-                className="p-8 bg-zinc-900/30 border border-white/5 rounded-[32px] hover:border-emerald-500/30 transition-all"
+                whileHover={{ scale: 1.02, y: -5 }}
+                className="p-8 bg-zinc-900/30 backdrop-blur-sm border border-white/5 rounded-[32px] hover:border-emerald-500/30 hover:bg-zinc-900/50 transition-all duration-500 group"
               >
                 <div className="flex justify-between items-start mb-6">
-                  {/* 可修改：游戏品类名称 */}
-                  <h4 className="text-lg font-black text-white uppercase tracking-tight">{cat.name}</h4>
-                  <span className="text-xs font-black text-emerald-500">{cat.hours}</span>
+                  <h4 className="text-xl font-black text-white uppercase tracking-tight group-hover:text-emerald-400 transition-colors">{cat.name}</h4>
+                  <div className="px-3 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20">
+                    <span className="text-[10px] font-black text-emerald-500 tracking-widest">{cat.hours}</span>
+                  </div>
                 </div>
-                <p className="text-xs text-zinc-500 leading-relaxed">
-                  {/* 可修改：具体代表作 */}
-                  {cat.games}
-                </p>
+                <div className="space-y-4">
+                  <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                    <motion.div 
+                      initial={{ width: 0 }}
+                      whileInView={{ width: "70%" }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.5, delay: i * 0.1 }}
+                      className="h-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]"
+                    />
+                  </div>
+                  <p className="text-xs text-zinc-400 leading-relaxed font-medium">
+                    {cat.games}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -789,30 +941,33 @@ const GamerDNA = () => {
 
 const TechStack = () => {
   return (
-    <section className="py-24 bg-zinc-900/20 border-y border-white/5">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="text-center md:text-left">
-            {/* 可修改：技术栈区域标题 */}
-            <h3 className="text-xs font-black uppercase tracking-[0.4em] text-zinc-500 mb-2">软件工具栈</h3>
-            <p className="text-2xl font-display font-black text-white">技术栈.</p>
+    <section className="py-24 bg-black/40 backdrop-blur-md border-y border-white/5 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-8 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
+          <div className="text-center lg:text-left">
+            <p className="text-[10px] font-black uppercase tracking-[0.4em] text-emerald-500 mb-4">Tools & Skills</p>
+            <h3 className="text-4xl font-display font-black text-white tracking-tighter">技能工具栈.</h3>
           </div>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16">
-            {SOFTWARE_SKILLS.map((skill) => (
-              <div key={skill.name} className="flex flex-col items-center gap-4 group">
-                <div className="w-16 h-16 bg-zinc-900 border border-white/5 rounded-2xl flex items-center justify-center text-zinc-500 group-hover:text-emerald-500 group-hover:border-emerald-500/5 group-hover:bg-emerald-500/5 transition-all duration-500">
-                  {skill.icon}
+          <div className="flex flex-wrap justify-center lg:justify-end gap-6 md:gap-12">
+            {SOFTWARE_SKILLS.map((skill, i) => (
+              <motion.div 
+                key={i}
+                whileHover={{ y: -5, scale: 1.1 }}
+                className="flex flex-col items-center gap-4 group"
+              >
+                <div className="w-20 h-20 bg-zinc-900/50 border border-white/10 rounded-3xl flex items-center justify-center text-zinc-400 group-hover:text-emerald-500 group-hover:border-emerald-500/30 group-hover:bg-zinc-900 transition-all duration-500 shadow-xl">
+                  {React.cloneElement(skill.icon as React.ReactElement, { className: "w-10 h-10" })}
                 </div>
                 <div className="text-center">
-                  {/* 可修改：软件名称与熟练度 */}
-                  <p className="text-[10px] font-black uppercase tracking-widest text-zinc-400 group-hover:text-white transition-colors">{skill.name}</p>
-                  <p className="text-[8px] font-bold text-zinc-600 uppercase mt-1">{skill.level}</p>
+                  <p className="text-xs font-black text-white uppercase tracking-tight">{skill.name}</p>
+                  <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mt-1">{skill.level}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_50%,#10b98105,transparent_40%)]" />
     </section>
   );
 };
@@ -821,12 +976,25 @@ export default function App() {
   const [isPdfOpen, setIsPdfOpen] = useState(false);
 
   return (
-    <div className="bg-zinc-950 font-sans">
+    <div className="relative min-h-screen font-sans text-white selection:bg-emerald-500/30">
+      {/* Global Background Image */}
+      <div className="fixed inset-0 -z-50 overflow-hidden">
+        <img 
+          src={PERSONAL_INFO.globalBgUrl} 
+          alt="Background" 
+          className="w-full h-full object-cover scale-105"
+          referrerPolicy="no-referrer"
+        />
+        {/* Dark Overlay for Readability */}
+        <div className="absolute inset-0 bg-zinc-950/80 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/40 via-transparent to-zinc-950/60" />
+      </div>
+
       <Navbar onPreview={() => setIsPdfOpen(true)} />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <TechStack />
-        <DemoSection />
+        <DemoSection onPreview={() => setIsPdfOpen(true)} />
         <GamerDNA />
         <PersonalDossier />
         <ExperienceSection />
