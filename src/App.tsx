@@ -37,8 +37,10 @@ import {
   Eye
 } from 'lucide-react';
 
-import lostLandImg from './assets/LostLand.png';
-import dsc2414Img from './assets/DSC_2414.jpg';
+// import lostLandImg from './assets/LostLand.png';
+// import dsc2414Img from './assets/DSC_2414.jpg';
+const lostLandImg = "/assets/lostland.png";
+const dsc2414Img = "/assets/dsc_2414.jpg";
 
 /// --- Data from Resume (可修改：个人基本信息) ---
 const PERSONAL_INFO = {
@@ -48,7 +50,7 @@ const PERSONAL_INFO = {
   phone: "17642128621", // 可修改：电话
   location: "北京 / 朝阳", // 可修改：坐标
   resumeUrl: "/resume.pdf", // 可修改：简历 PDF 链接 (用于预览和下载)
-  avatarUrl: "/icons/Self.jpg", // 可修改：个人头像/首屏大图链接
+  avatarUrl: "/icons/self.jpg", // 可修改：个人头像/首屏大图链接
   globalBgUrl: "https://picsum.photos/seed/game-bg/1920/1080?blur=4", // 可修改：全局背景图片链接
   intro: "目前正在北邮攻读设计学硕士，意向岗位为游戏战斗策划。希望能够通过个人的设计与实现构建出一场又一场令玩家难忘的BOSS战。", // 可修改：个人简介
   summary: [ // 可修改：核心优势列表
@@ -60,11 +62,11 @@ const PERSONAL_INFO = {
 
 // 可修改：软件技能列表
 const SOFTWARE_SKILLS = [
-  { name: "Unreal Engine", icon: "/icons/UE.svg", level: "掌握" }, // 准备替换为 public/icons/ue.svg
+  { name: "Unreal Engine", icon: "/icons/ue.svg", level: "掌握" }, // 准备替换为 public/icons/ue.svg
   { name: "Unity", icon: "/icons/unity.svg", level: "熟悉" },
-  { name: "Figma", icon: "/icons/FigmaIcon.svg", level: "掌握" },
-  { name: "C++", icon: "/icons/C++.svg", level: "基础" },
-  { name: "Blender", icon: "/icons/Blender.svg", level: "熟悉" }
+  { name: "Figma", icon: "/icons/figma.svg", level: "掌握" },
+  { name: "C++", icon: "/icons/cpp.svg", level: "基础" },
+  { name: "Blender", icon: "/icons/blender.svg", level: "熟悉" }
 ];
 
 // 可修改：游戏经历总结
@@ -123,9 +125,9 @@ const DEMOS = [
     tag: "策略卡牌 全流程",
     category: "肉鸽 / 词条自定义",
     images: [
-      "/DemoGame/TapTap01.jpg", 
-      "/DemoGame/TapTap02.jpg", 
-      "/DemoGame/TapTap03.jpg"
+      "/DemoGame/taptap01.jpg", 
+      "/DemoGame/taptap02.jpg", 
+      "/DemoGame/taptap03.jpg"
     ],
     video: "https://www.taptap.cn/app/781253?os=pc", // 可修改：B站视频链接
     downloadLink: "https://www.taptap.cn/app/781253?os=pc", // 可修改：百度网盘下载链接
@@ -138,9 +140,9 @@ const DEMOS = [
     tag: "轻竞技 Demo",
     category: "AI+游戏训练营",
     images: [
-      "/DemoGame/LongZhougame01.jpg",
-      "/DemoGame/LongZhouGame02.jpg",
-      "/DemoGame/LongZhougame03.jpg",
+      "/DemoGame/longzhougame01.jpg",
+      "/DemoGame/longzhougame02.jpg",
+      "/DemoGame/longzhougame03.jpg",
     ],
     video: "#", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/16qPFveF8oubwh2x0-OxIDw?pwd=8888", // 可修改：百度网盘下载链接
@@ -153,9 +155,9 @@ const DEMOS = [
     tag: "VR，RPG",
     category: "VR / RPG",
     images: [
-      "/DemoGame/VRGame01.jpg",
-      "/DemoGame/VRGame02.jpg",
-      "/DemoGame/VRGame03.jpg"
+      "/DemoGame/vrgame01.jpg",
+      "/DemoGame/vrgame02.jpg",
+      "/DemoGame/vrgame03.jpg"
     ],
     video: "https://www.bilibili.com/video/BV1okwTe5EaY/?spm_id_from=333.337.search-card.all.click&vd_source=838b90a95a61e8bf8e67724156422195", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/1kiPzW2apb5Ri43sH2qqdUQ?pwd=8888", // 可修改：百度网盘下载链接
@@ -167,9 +169,9 @@ const DEMOS = [
     tag: "48hGameJam，关卡解密",
     category: "Game Jam / 解密",
     images: [
-      "/DemoGame/Daogame01.jpg",
-      "/DemoGame/Daogame02.jpg",
-      "/DemoGame/Daogame03.jpg"
+      "/DemoGame/daogame01.jpg",
+      "/DemoGame/daogame02.jpg",
+      "/DemoGame/daogame03.jpg"
     ],
     video: "#", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/1TSLcqD0CHcrrNxmB__IETQ?pwd=8888 ", // 可修改：百度网盘下载链接
