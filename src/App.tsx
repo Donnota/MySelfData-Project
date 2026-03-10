@@ -145,7 +145,7 @@ const DEMOS = [
     category: "AI+游戏训练营",
     images: [
       "/demogame/LongZhougame01.svg",
-      "/demogame/LongZhougame02.svg",
+      "/demogame/LongZhouGame02.svg",
       "/demogame/LongZhougame03.svg",
     ],
     video: "#", // 可修改：B站视频链接
