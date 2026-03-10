@@ -65,7 +65,7 @@ const SOFTWARE_SKILLS = [
   { name: "Unreal Engine", icon: "/icons/ue.svg", level: "掌握" }, // 准备替换为 public/icons/ue.svg
   { name: "Unity", icon: "/icons/unity.svg", level: "熟悉" },
   { name: "Figma", icon: "/icons/figma.svg", level: "掌握" },
-  { name: "C++", icon: "/icons/C++.svg", level: "基础" },
+  { name: "C++", icon: "/icons/cpp.svg", level: "基础" },
   { name: "Blender", icon: "/icons/blender.svg", level: "熟悉" }
 ];
 
@@ -125,9 +125,9 @@ const DEMOS = [
     tag: "策略卡牌 全流程",
     category: "肉鸽 / 词条自定义",
     images: [
-      "/DemoGame/taptap01.jpg", 
-      "/DemoGame/taptap02.jpg", 
-      "/DemoGame/taptap03.jpg"
+      "/demogame/taptap01.jpg", 
+      "/demogame/taptap02.jpg", 
+      "/demogame/taptap03.jpg"
     ],
     video: "https://www.taptap.cn/app/781253?os=pc", // 可修改：B站视频链接
     downloadLink: "https://www.taptap.cn/app/781253?os=pc", // 可修改：百度网盘下载链接
@@ -140,9 +140,9 @@ const DEMOS = [
     tag: "轻竞技 Demo",
     category: "AI+游戏训练营",
     images: [
-      "/DemoGame/longzhougame01.jpg",
-      "/DemoGame/longzhougame02.jpg",
-      "/DemoGame/longzhougame03.jpg",
+      "/demogame/longzhougame01.jpg",
+      "/demogame/longzhougame02.jpg",
+      "/demogame/longzhougame03.jpg",
     ],
     video: "#", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/16qPFveF8oubwh2x0-OxIDw?pwd=8888", // 可修改：百度网盘下载链接
@@ -155,9 +155,9 @@ const DEMOS = [
     tag: "VR，RPG",
     category: "VR / RPG",
     images: [
-      "/DemoGame/vrgame01.jpg",
-      "/DemoGame/vrgame02.jpg",
-      "/DemoGame/vrgame03.jpg"
+      "/demogame/vrgame01.jpg",
+      "/demogame/vrgame02.jpg",
+      "/demogame/vrgame03.jpg"
     ],
     video: "https://www.bilibili.com/video/BV1okwTe5EaY/?spm_id_from=333.337.search-card.all.click&vd_source=838b90a95a61e8bf8e67724156422195", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/1kiPzW2apb5Ri43sH2qqdUQ?pwd=8888", // 可修改：百度网盘下载链接
@@ -169,9 +169,9 @@ const DEMOS = [
     tag: "48hGameJam，关卡解密",
     category: "Game Jam / 解密",
     images: [
-      "/DemoGame/daogame01.jpg",
-      "/DemoGame/daogame02.jpg",
-      "/DemoGame/daogame03.jpg"
+      "/demogame/daogame01.jpg",
+      "/demogame/daogame02.jpg",
+      "/demogame/daogame03.jpg"
     ],
     video: "#", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/1TSLcqD0CHcrrNxmB__IETQ?pwd=8888 ", // 可修改：百度网盘下载链接
