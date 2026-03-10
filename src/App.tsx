@@ -40,7 +40,7 @@ import {
 // import lostLandImg from './assets/LostLand.png';
 // import dsc2414Img from './assets/DSC_2414.jpg';
 const lostLandImg = "/assets/lostland.png";
-const dsc2414Img = "/demogame/DSC.svg";
+// const dsc2414Img = "/demogame/DSC.png";
 
 /// --- Data from Resume (可修改：个人基本信息) ---
 const PERSONAL_INFO = {
@@ -50,7 +50,7 @@ const PERSONAL_INFO = {
   phone: "17642128621", // 可修改：电话
   location: "北京 / 朝阳", // 可修改：坐标
   resumeUrl: "/resume.pdf", // 可修改：简历 PDF 链接 (用于预览和下载)
-  avatarUrl: "/demogame/Self.svg", // 可修改：个人头像/首屏大图链接
+  avatarUrl: "https://picsum.photos/seed/avatar/800/800", // 可修改：个人头像/首屏大图链接
   globalBgUrl: "https://picsum.photos/seed/game-bg/1920/1080?blur=4", // 可修改：全局背景图片链接
   intro: "目前正在北邮攻读设计学硕士，意向岗位为游戏战斗策划。希望能够通过个人的设计与实现构建出一场又一场令玩家难忘的BOSS战。", // 可修改：个人简介
   summary: [ // 可修改：核心优势列表
@@ -129,9 +129,9 @@ const DEMOS = [
     tag: "策略卡牌 全流程",
     category: "肉鸽 / 词条自定义",
     images: [
-      "/demogame/TapTap01.svg", 
-      "/demogame/TapTap02.png", 
-      "/demogame/TapTap03.svg"
+      "/gameicon/TapTap01.png", 
+      "/gameicon/TapTap02.png", 
+      "/gameicon/TapTap03.png"
     ],
     video: "https://www.taptap.cn/app/781253?os=pc", // 可修改：B站视频链接
     downloadLink: "https://www.taptap.cn/app/781253?os=pc", // 可修改：百度网盘下载链接
@@ -144,9 +144,9 @@ const DEMOS = [
     tag: "轻竞技 Demo",
     category: "AI+游戏训练营",
     images: [
-      "/demogame/LongZhouGame01.svg",
-      "/demogame/LongZhouGame02.svg",
-      "/demogame/LongZhouGame03.svg",
+      "/gameicon/LongZhougame01.png",
+      "/gameicon/LongZhouGame02.png",
+      "/gameicon/LongZhougame03.png",
     ],
     video: "#", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/16qPFveF8oubwh2x0-OxIDw?pwd=8888", // 可修改：百度网盘下载链接
@@ -159,9 +159,9 @@ const DEMOS = [
     tag: "VR，RPG",
     category: "VR / RPG",
     images: [
-      "/demogame/VRGame01.svg",
-      "/demogame/VRGame02.svg",
-      "/demogame/VRGame03.svg"
+      "/gameicon/VRGame01.png",
+      "/gameicon/VRGame02.png",
+      "/gameicon/VRGame03.png"
     ],
     video: "https://www.bilibili.com/video/BV1okwTe5EaY/?spm_id_from=333.337.search-card.all.click&vd_source=838b90a95a61e8bf8e67724156422195", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/1kiPzW2apb5Ri43sH2qqdUQ?pwd=8888", // 可修改：百度网盘下载链接
@@ -173,9 +173,9 @@ const DEMOS = [
     tag: "48hGameJam，关卡解密",
     category: "Game Jam / 解密",
     images: [
-      "/demogame/DaoGame01.svg",
-      "/demogame/DaoGame02.svg",
-      "/demogame/DaoGame03.svg"
+      "/gameicon/Daogame01.png",
+      "/gameicon/Daogame02.png",
+      "/gameicon/Daogame03.png"
     ],
     video: "#", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/1TSLcqD0CHcrrNxmB__IETQ?pwd=8888 ", // 可修改：百度网盘下载链接
@@ -923,7 +923,7 @@ const BilibiliSection = () => {
             <div className="absolute inset-0 bg-emerald-500/20 rounded-[40px] blur-3xl group-hover:bg-emerald-500/30 transition-colors duration-700" />
             <div className="relative h-full rounded-[40px] overflow-hidden border border-white/10 bg-zinc-900/50 backdrop-blur-sm">
               <img 
-                src={dsc2414Img} 
+                src="https://picsum.photos/seed/bilibili/800/800" 
                 alt="Bilibili Channel Preview" 
                 className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 referrerPolicy="no-referrer"
