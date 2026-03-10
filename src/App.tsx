@@ -37,6 +37,32 @@ import {
   Eye
 } from 'lucide-react';
 
+import avatarImg from './assets/icons/Self.jpg';
+import iconUE from './assets/icons/UE.svg';
+import iconUnity from './assets/icons/unity.svg';
+import iconFigma from './assets/icons/FigmaIcon.svg';
+import iconCpp from './assets/icons/C++.svg';
+import iconBlender from './assets/icons/Blender.svg';
+
+import tapTap01 from './assets/DemoGame/TapTap01.jpg';
+import tapTap02 from './assets/DemoGame/TapTap02.jpg';
+import tapTap03 from './assets/DemoGame/TapTap03.jpg';
+
+import longZhou01 from './assets/DemoGame/LongZhougame01.jpg';
+import longZhou02 from './assets/DemoGame/LongZhouGame02.jpg';
+import longZhou03 from './assets/DemoGame/LongZhougame03.jpg';
+
+import vrGame01 from './assets/DemoGame/VRGame01.jpg';
+import vrGame02 from './assets/DemoGame/VRGame02.jpg';
+import vrGame03 from './assets/DemoGame/VRGame03.jpg';
+
+import daoGame01 from './assets/DemoGame/Daogame01.jpg';
+import daoGame02 from './assets/DemoGame/Daogame02.jpg';
+import daoGame03 from './assets/DemoGame/Daogame03.jpg';
+
+import lostLandImg from './assets/LostLand.png';
+import dsc2414Img from './assets/DSC_2414.jpg';
+
 /// --- Data from Resume (可修改：个人基本信息) ---
 const PERSONAL_INFO = {
   name: "打坐ing", // 可修改：姓名
@@ -45,7 +71,7 @@ const PERSONAL_INFO = {
   phone: "17642128621", // 可修改：电话
   location: "北京 / 朝阳", // 可修改：坐标
   resumeUrl: "/resume.pdf", // 可修改：简历 PDF 链接 (用于预览和下载)
-  avatarUrl: "/icons/Self.jpg", // 可修改：个人头像/首屏大图链接
+  avatarUrl: avatarImg, // 可修改：个人头像/首屏大图链接
   globalBgUrl: "https://picsum.photos/seed/game-bg/1920/1080?blur=4", // 可修改：全局背景图片链接
   intro: "目前正在北邮攻读设计学硕士，意向岗位为游戏战斗策划。希望能够通过个人的设计与实现构建出一场又一场令玩家难忘的BOSS战。", // 可修改：个人简介
   summary: [ // 可修改：核心优势列表
@@ -57,11 +83,11 @@ const PERSONAL_INFO = {
 
 // 可修改：软件技能列表
 const SOFTWARE_SKILLS = [
-  { name: "Unreal Engine", icon: "/icons/UE.svg", level: "掌握" }, // 准备替换为 public/icons/ue.svg
-  { name: "Unity", icon: "/icons/unity.svg", level: "熟悉" },
-  { name: "Figma", icon: "/icons/FigmaIcon.svg", level: "掌握" },
-  { name: "C++", icon: "/icons/C++.svg", level: "基础" },
-  { name: "Blender", icon: "/icons/Blender.svg", level: "熟悉" }
+  { name: "Unreal Engine", icon: iconUE, level: "掌握" }, // 准备替换为 public/icons/ue.svg
+  { name: "Unity", icon: iconUnity, level: "熟悉" },
+  { name: "Figma", icon: iconFigma, level: "掌握" },
+  { name: "C++", icon: iconCpp, level: "基础" },
+  { name: "Blender", icon: iconBlender, level: "熟悉" }
 ];
 
 // 可修改：游戏经历总结
@@ -108,7 +134,7 @@ const DEMOS = [
     title: "《陷落之地》--腾讯星跃实战营", // 可修改：项目标题
     tag: "战斗框架 Demo", // 可修改：标签
     category: "UE GAS / 类魂战斗", // 可修改：分类
-    images: ["/LostLand.png", "https://picsum.photos/seed/fallen2/1200/800", "https://picsum.photos/seed/fallen3/1200/800"], // 可修改：图片链接列表
+    images: [lostLandImg, "https://picsum.photos/seed/fallen2/1200/800", "https://picsum.photos/seed/fallen3/1200/800"], // 可修改：图片链接列表
     video: "#", // 可修改：B站视频链接 (例如: "https://www.bilibili.com/video/BV...")
     downloadLink: "#", // 可修改：百度网盘下载链接 (例如: "https://pan.baidu.com/s/...")
     description: "基于UE GAS框架，设计并开发一套基于“虚能”为循环资源的类魂战斗框架。包含普通小怪、精英Boss及大体型龙形Boss的AI设计与实现。", // 可修改：描述
@@ -120,9 +146,9 @@ const DEMOS = [
     tag: "策略卡牌 全流程",
     category: "肉鸽 / 词条自定义",
     images: [
-      "/DemoGame/TapTap01.jpg", 
-      "/DemoGame/TapTap02.jpg",
-      "/DemoGame/TapTap03.jpg"
+      tapTap01, 
+      tapTap02,
+      tapTap03
     ],
     video: "https://www.taptap.cn/app/781253?os=pc", // 可修改：B站视频链接
     downloadLink: "https://www.taptap.cn/app/781253?os=pc", // 可修改：百度网盘下载链接
@@ -135,9 +161,9 @@ const DEMOS = [
     tag: "轻竞技 Demo",
     category: "AI+游戏训练营",
     images: [
-      "/DemoGame/LongZhougame01.jpg",
-      "/DemoGame/LongZhouGame02.jpg",
-      "/DemoGame/LongZhougame03.jpg",
+      longZhou01,
+      longZhou02,
+      longZhou03,
     ],
     video: "#", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/16qPFveF8oubwh2x0-OxIDw?pwd=8888", // 可修改：百度网盘下载链接
@@ -150,9 +176,9 @@ const DEMOS = [
     tag: "VR，RPG",
     category: "VR / RPG",
     images: [
-      "/DemoGame/VRGame01.jpg",
-      "/DemoGame/VRGame02.jpg",
-      "/DemoGame/VRGame03.jpg"
+      vrGame01,
+      vrGame02,
+      vrGame03
     ],
     video: "https://www.bilibili.com/video/BV1okwTe5EaY/?spm_id_from=333.337.search-card.all.click&vd_source=838b90a95a61e8bf8e67724156422195", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/1kiPzW2apb5Ri43sH2qqdUQ?pwd=8888", // 可修改：百度网盘下载链接
@@ -164,9 +190,9 @@ const DEMOS = [
     tag: "48hGameJam，关卡解密",
     category: "Game Jam / 解密",
     images: [
-      "/DemoGame/Daogame01.jpg",
-      "/DemoGame/Daogame02.jpg",
-      "/DemoGame/Daogame03.jpg"
+      daoGame01,
+      daoGame02,
+      daoGame03
     ],
     video: "#", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/1TSLcqD0CHcrrNxmB__IETQ?pwd=8888 ", // 可修改：百度网盘下载链接
@@ -893,7 +919,7 @@ const BilibiliSection = () => {
             <div className="absolute inset-0 bg-emerald-500/20 rounded-[40px] blur-3xl group-hover:bg-emerald-500/30 transition-colors duration-700" />
             <div className="relative h-full rounded-[40px] overflow-hidden border border-white/10 bg-zinc-900/50 backdrop-blur-sm">
               <img 
-                src="/DSC_2414.jpg" 
+                src={dsc2414Img} 
                 alt="Bilibili Channel Preview" 
                 className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 referrerPolicy="no-referrer"
