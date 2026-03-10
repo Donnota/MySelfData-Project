@@ -130,7 +130,7 @@ const DEMOS = [
     category: "肉鸽 / 词条自定义",
     images: [
       "/demogame/TapTap01.svg", 
-      "/demogame/TapTap02.svg", 
+      "/demogame/TapTap02.png", 
       "/demogame/TapTap03.svg"
     ],
     video: "https://www.taptap.cn/app/781253?os=pc", // 可修改：B站视频链接
@@ -144,9 +144,9 @@ const DEMOS = [
     tag: "轻竞技 Demo",
     category: "AI+游戏训练营",
     images: [
-      "/demogame/LongZhougame01.svg",
+      "/demogame/LongZhouGame01.svg",
       "/demogame/LongZhouGame02.svg",
-      "/demogame/LongZhougame03.svg",
+      "/demogame/LongZhouGame03.svg",
     ],
     video: "#", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/16qPFveF8oubwh2x0-OxIDw?pwd=8888", // 可修改：百度网盘下载链接
@@ -173,9 +173,9 @@ const DEMOS = [
     tag: "48hGameJam，关卡解密",
     category: "Game Jam / 解密",
     images: [
-      "/demogame/Daogame01.svg",
-      "/demogame/Daogame02.svg",
-      "/demogame/Daogame03.svg"
+      "/demogame/DaoGame01.svg",
+      "/demogame/DaoGame02.svg",
+      "/demogame/DaoGame03.svg"
     ],
     video: "#", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/1TSLcqD0CHcrrNxmB__IETQ?pwd=8888 ", // 可修改：百度网盘下载链接
@@ -873,6 +873,7 @@ const AwardsSection = () => {
 };
 
 const BilibiliSection = () => {
+  const [avatarError, setAvatarError] = useState(false);
   const collections = [
     {
       title: "卡牌肉鸽教程",
@@ -931,7 +932,12 @@ const BilibiliSection = () => {
               <div className="absolute bottom-10 left-10 right-10 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-emerald-500">
-                    <img src={PERSONAL_INFO.avatarUrl} alt="Avatar" className="w-full h-full object-cover" />
+                    <img 
+                      src={avatarError ? "https://picsum.photos/seed/avatar/200/200" : PERSONAL_INFO.avatarUrl} 
+                      alt="Avatar" 
+                      className="w-full h-full object-cover" 
+                      onError={() => setAvatarError(true)}
+                    />
                   </div>
                   <div>
                     <h3 className="text-2xl font-black text-white">{PERSONAL_INFO.name}</h3>
