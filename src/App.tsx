@@ -40,7 +40,7 @@ import {
 // import lostLandImg from './assets/LostLand.png';
 // import dsc2414Img from './assets/DSC_2414.jpg';
 const lostLandImg = "/assets/lostland.png";
-const dsc2414Img = "/assets/dsc_2414.jpg";
+const dsc2414Img = "/demogame/DSC.svg";
 
 /// --- Data from Resume (可修改：个人基本信息) ---
 const PERSONAL_INFO = {
@@ -50,7 +50,7 @@ const PERSONAL_INFO = {
   phone: "17642128621", // 可修改：电话
   location: "北京 / 朝阳", // 可修改：坐标
   resumeUrl: "/resume.pdf", // 可修改：简历 PDF 链接 (用于预览和下载)
-  avatarUrl: "/icons/self.jpg", // 可修改：个人头像/首屏大图链接
+  avatarUrl: "/demogame/Self.svg", // 可修改：个人头像/首屏大图链接
   globalBgUrl: "https://picsum.photos/seed/game-bg/1920/1080?blur=4", // 可修改：全局背景图片链接
   intro: "目前正在北邮攻读设计学硕士，意向岗位为游戏战斗策划。希望能够通过个人的设计与实现构建出一场又一场令玩家难忘的BOSS战。", // 可修改：个人简介
   summary: [ // 可修改：核心优势列表
@@ -113,7 +113,11 @@ const DEMOS = [
     title: "《陷落之地》--腾讯星跃实战营", // 可修改：项目标题
     tag: "战斗框架 Demo", // 可修改：标签
     category: "UE GAS / 类魂战斗", // 可修改：分类
-    images: [lostLandImg, "https://picsum.photos/seed/fallen2/1200/800", "https://picsum.photos/seed/fallen3/1200/800"], // 可修改：图片链接列表
+    images: [
+      lostLandImg, 
+      "https://picsum.photos/seed/fallen2/1200/800", 
+      "https://picsum.photos/seed/fallen3/1200/800"
+    ], // 可修改：图片链接列表
     video: "#", // 可修改：B站视频链接 (例如: "https://www.bilibili.com/video/BV...")
     downloadLink: "#", // 可修改：百度网盘下载链接 (例如: "https://pan.baidu.com/s/...")
     description: "基于UE GAS框架，设计并开发一套基于“虚能”为循环资源的类魂战斗框架。包含普通小怪、精英Boss及大体型龙形Boss的AI设计与实现。", // 可修改：描述
@@ -125,9 +129,9 @@ const DEMOS = [
     tag: "策略卡牌 全流程",
     category: "肉鸽 / 词条自定义",
     images: [
-      "/demogame/taptap01.jpg", 
-      "/demogame/taptap02.jpg", 
-      "/demogame/taptap03.jpg"
+      "/demogame/TapTap01.svg", 
+      "/demogame/TapTap02.svg", 
+      "/demogame/TapTap03.svg"
     ],
     video: "https://www.taptap.cn/app/781253?os=pc", // 可修改：B站视频链接
     downloadLink: "https://www.taptap.cn/app/781253?os=pc", // 可修改：百度网盘下载链接
@@ -140,9 +144,9 @@ const DEMOS = [
     tag: "轻竞技 Demo",
     category: "AI+游戏训练营",
     images: [
-      "/demogame/longzhougame01.jpg",
-      "/demogame/longzhougame02.jpg",
-      "/demogame/longzhougame03.jpg",
+      "/demogame/LongZhougame01.svg",
+      "/demogame/LongZhougame02.svg",
+      "/demogame/LongZhougame03.svg",
     ],
     video: "#", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/16qPFveF8oubwh2x0-OxIDw?pwd=8888", // 可修改：百度网盘下载链接
@@ -155,9 +159,9 @@ const DEMOS = [
     tag: "VR，RPG",
     category: "VR / RPG",
     images: [
-      "/demogame/vrgame01.jpg",
-      "/demogame/vrgame02.jpg",
-      "/demogame/vrgame03.jpg"
+      "/demogame/VRGame01.svg",
+      "/demogame/VRGame02.svg",
+      "/demogame/VRGame03.svg"
     ],
     video: "https://www.bilibili.com/video/BV1okwTe5EaY/?spm_id_from=333.337.search-card.all.click&vd_source=838b90a95a61e8bf8e67724156422195", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/1kiPzW2apb5Ri43sH2qqdUQ?pwd=8888", // 可修改：百度网盘下载链接
@@ -169,9 +173,9 @@ const DEMOS = [
     tag: "48hGameJam，关卡解密",
     category: "Game Jam / 解密",
     images: [
-      "/demogame/daogame01.jpg",
-      "/demogame/daogame02.jpg",
-      "/demogame/daogame03.jpg"
+      "/demogame/Daogame01.svg",
+      "/demogame/Daogame02.svg",
+      "/demogame/Daogame03.svg"
     ],
     video: "#", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/1TSLcqD0CHcrrNxmB__IETQ?pwd=8888 ", // 可修改：百度网盘下载链接
@@ -314,6 +318,8 @@ const Navbar = ({ onPreview }: { onPreview: () => void }) => {
 };
 
 const Hero = () => {
+  const [avatarError, setAvatarError] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
       {/* Background Elements - Subtle Grid & Atmospheric Glow */}
@@ -330,7 +336,12 @@ const Hero = () => {
         >
           <div className="flex items-center gap-4 mb-10">
             <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-emerald-500/30 p-1 bg-zinc-900 lg:hidden shadow-lg shadow-emerald-500/20">
-              <img src={PERSONAL_INFO.avatarUrl} alt={PERSONAL_INFO.name} className="w-full h-full object-cover rounded-xl" />
+              <img 
+                src={avatarError ? "https://picsum.photos/seed/avatar/200/200" : PERSONAL_INFO.avatarUrl} 
+                alt={PERSONAL_INFO.name} 
+                className="w-full h-full object-cover rounded-xl"
+                onError={() => setAvatarError(true)}
+              />
             </div>
             <div>
               <h2 className="text-2xl font-display font-black text-white tracking-tight">{PERSONAL_INFO.name}</h2>
@@ -396,10 +407,11 @@ const Hero = () => {
         >
           <div className="relative z-10 aspect-square rounded-[40px] overflow-hidden border border-white/5 p-1 bg-zinc-900/20 backdrop-blur-3xl shadow-2xl shadow-black/50 group">
             <img 
-              src={PERSONAL_INFO.avatarUrl} 
+              src={avatarError ? "https://picsum.photos/seed/avatar/800/800" : PERSONAL_INFO.avatarUrl} 
               alt={PERSONAL_INFO.name} 
               className="w-full h-full object-cover rounded-[36px] transition-all duration-1000 scale-105 group-hover:scale-100"
               referrerPolicy="no-referrer"
+              onError={() => setAvatarError(true)}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
           </div>
@@ -443,6 +455,16 @@ const Hero = () => {
 const ImageCarousel = ({ images, title, isPortrait = false }: { images: string[], title: string, isPortrait?: boolean }) => {
   const [index, setIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [errorImages, setErrorImages] = useState<Record<number, boolean>>({});
+
+  const handleImageError = (idx: number) => {
+    setErrorImages(prev => ({ ...prev, [idx]: true }));
+  };
+
+  const getImageUrl = (idx: number) => {
+    if (errorImages[idx]) return "/demogame/placeholder.svg";
+    return images[idx];
+  };
 
   useEffect(() => {
     if (images.length <= 1 || isHovered) return;
@@ -460,10 +482,11 @@ const ImageCarousel = ({ images, title, isPortrait = false }: { images: string[]
     return (
       <div className={`relative ${containerAspect} rounded-[40px] overflow-hidden border border-white/10`}>
         <img 
-          src={images[0]} 
+          src={getImageUrl(0)} 
           alt={title} 
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
+          onError={() => handleImageError(0)}
         />
       </div>
     );
@@ -478,13 +501,14 @@ const ImageCarousel = ({ images, title, isPortrait = false }: { images: string[]
       <AnimatePresence mode="wait">
         <motion.img
           key={index}
-          src={images[index]}
+          src={getImageUrl(index)}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
           className="absolute inset-0 w-full h-full object-cover"
           referrerPolicy="no-referrer"
+          onError={() => handleImageError(index)}
         />
       </AnimatePresence>
       
