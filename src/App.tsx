@@ -123,9 +123,9 @@ const DEMOS = [
     tag: "策略卡牌 全流程",
     category: "肉鸽 / 词条自定义",
     images: [
-      "./DemoGame/TapTap01.jpg", 
-      "./DemoGame/TapTap02.jpg",
-      "./DemoGame/TapTap03.jpg"
+      "DemoGame/TapTap01.jpg", 
+      "DemoGame/TapTap02.jpg",
+      "DemoGame/TapTap03.jpg"
     ],
     video: "https://www.taptap.cn/app/781253?os=pc", // 可修改：B站视频链接
     downloadLink: "https://www.taptap.cn/app/781253?os=pc", // 可修改：百度网盘下载链接
