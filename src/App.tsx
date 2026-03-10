@@ -50,7 +50,7 @@ const PERSONAL_INFO = {
   phone: "17642128621", // 可修改：电话
   location: "北京 / 朝阳", // 可修改：坐标
   resumeUrl: "/resume.pdf", // 可修改：简历 PDF 链接 (用于预览和下载)
-  avatarUrl: "https://picsum.photos/seed/avatar/800/800", // 可修改：个人头像/首屏大图链接
+  avatarUrl: "/gameicon/Self.png", // 可修改：个人头像/首屏大图链接
   globalBgUrl: "https://picsum.photos/seed/game-bg/1920/1080?blur=4", // 可修改：全局背景图片链接
   intro: "目前正在北邮攻读设计学硕士，意向岗位为游戏战斗策划。希望能够通过个人的设计与实现构建出一场又一场令玩家难忘的BOSS战。", // 可修改：个人简介
   summary: [ // 可修改：核心优势列表
@@ -407,7 +407,7 @@ const Hero = () => {
         >
           <div className="relative z-10 aspect-square rounded-[40px] overflow-hidden border border-white/5 p-1 bg-zinc-900/20 backdrop-blur-3xl shadow-2xl shadow-black/50 group">
             <img 
-              src={avatarError ? "https://picsum.photos/seed/avatar/800/800" : PERSONAL_INFO.avatarUrl} 
+              src={avatarError ? "/gameicon/Self.png" : PERSONAL_INFO.avatarUrl} 
               alt={PERSONAL_INFO.name} 
               className="w-full h-full object-cover rounded-[36px] transition-all duration-1000 scale-105 group-hover:scale-100"
               referrerPolicy="no-referrer"
@@ -923,7 +923,7 @@ const BilibiliSection = () => {
             <div className="absolute inset-0 bg-emerald-500/20 rounded-[40px] blur-3xl group-hover:bg-emerald-500/30 transition-colors duration-700" />
             <div className="relative h-full rounded-[40px] overflow-hidden border border-white/10 bg-zinc-900/50 backdrop-blur-sm">
               <img 
-                src="https://picsum.photos/seed/bilibili/800/800" 
+                src="/gameicon/DSC_2414.png" 
                 alt="Bilibili Channel Preview" 
                 className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 referrerPolicy="no-referrer"
