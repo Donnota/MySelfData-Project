@@ -129,9 +129,9 @@ const DEMOS = [
     tag: "策略卡牌 全流程",
     category: "肉鸽 / 词条自定义",
     images: [
-      "/gameicon/TapTap01.png", 
-      "/gameicon/TapTap02.png", 
-      "/gameicon/TapTap03.png"
+      "/gameicon/taptap01.png", 
+      "/gameicon/taptap02.png", 
+      "/gameicon/taptap03.png"
     ],
     video: "https://www.taptap.cn/app/781253?os=pc", // 可修改：B站视频链接
     downloadLink: "https://www.taptap.cn/app/781253?os=pc", // 可修改：百度网盘下载链接
@@ -144,9 +144,9 @@ const DEMOS = [
     tag: "轻竞技 Demo",
     category: "AI+游戏训练营",
     images: [
-      "/gameicon/LongZhougame01.png",
-      "/gameicon/LongZhouGame02.png",
-      "/gameicon/LongZhougame03.png",
+      "/gameicon/longzhougame01.png",
+      "/gameicon/longzhougame02.png",
+      "/gameicon/longzhougame03.png",
     ],
     video: "#", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/16qPFveF8oubwh2x0-OxIDw?pwd=8888", // 可修改：百度网盘下载链接
@@ -159,9 +159,9 @@ const DEMOS = [
     tag: "VR，RPG",
     category: "VR / RPG",
     images: [
-      "/gameicon/VRGame01.png",
-      "/gameicon/VRGame02.png",
-      "/gameicon/VRGame03.png"
+      "/gameicon/vrgame01.png",
+      "/gameicon/vrgame02.png",
+      "/gameicon/vrgame03.png"
     ],
     video: "https://www.bilibili.com/video/BV1okwTe5EaY/?spm_id_from=333.337.search-card.all.click&vd_source=838b90a95a61e8bf8e67724156422195", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/1kiPzW2apb5Ri43sH2qqdUQ?pwd=8888", // 可修改：百度网盘下载链接
@@ -173,9 +173,9 @@ const DEMOS = [
     tag: "48hGameJam，关卡解密",
     category: "Game Jam / 解密",
     images: [
-      "/gameicon/Daogame01.png",
-      "/gameicon/Daogame02.png",
-      "/gameicon/Daogame03.png"
+      "/gameicon/daogame01.png",
+      "/gameicon/daogame02.png",
+      "/gameicon/daogame03.png"
     ],
     video: "#", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/1TSLcqD0CHcrrNxmB__IETQ?pwd=8888 ", // 可修改：百度网盘下载链接
