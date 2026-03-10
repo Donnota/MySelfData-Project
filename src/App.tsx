@@ -37,7 +37,7 @@ import {
   Eye
 } from 'lucide-react';
 
-import avatarImg from './assets/icons/Self.jpg';
+import avatarImg from './assets/icons/self.jpg';
 import iconUE from './assets/icons/UE.svg';
 import iconUnity from './assets/icons/unity.svg';
 import iconFigma from './assets/icons/FigmaIcon.svg';
