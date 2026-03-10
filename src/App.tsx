@@ -39,15 +39,15 @@ import {
 
 /// --- Data from Resume (可修改：个人基本信息) ---
 const PERSONAL_INFO = {
-  name: "刘先胜", // 可修改：姓名
+  name: "打坐ing", // 可修改：姓名
   role: "游戏策划 (战斗) | 2027届硕士在读", // 可修改：职位
   email: "3142568588@qq.com", // 可修改：邮箱
   phone: "17642128621", // 可修改：电话
   location: "北京 / 朝阳", // 可修改：坐标
-  resumeUrl: "#", // 可修改：简历 PDF 链接 (用于预览和下载)
-  avatarUrl: "https://picsum.photos/seed/liuxiansheng_hero/800/1000", // 可修改：个人头像/首屏大图链接
+  resumeUrl: "/resume.pdf", // 可修改：简历 PDF 链接 (用于预览和下载)
+  avatarUrl: "/icons/Self.jpg", // 可修改：个人头像/首屏大图链接
   globalBgUrl: "https://picsum.photos/seed/game-bg/1920/1080?blur=4", // 可修改：全局背景图片链接
-  intro: "目前正在北邮攻读设计学硕士，意向岗位为游戏战斗策划。希望能够通过个人的设计与实现构建出一场又一场领玩家难忘的BOSS战。", // 可修改：个人简介
+  intro: "目前正在北邮攻读设计学硕士，意向岗位为游戏战斗策划。希望能够通过个人的设计与实现构建出一场又一场令玩家难忘的BOSS战。", // 可修改：个人简介
   summary: [ // 可修改：核心优势列表
     "掌握UE引擎开发流程，有过完整的从设计游戏框架到开发实现再到最终打包上线的实践经历",
     "对UE中GamePlay，GameplayTags，GAS框架，动画状态机，AI行为树，状态树等内容均有学习与实践经历",
@@ -109,7 +109,8 @@ const DEMOS = [
     tag: "战斗框架 Demo", // 可修改：标签
     category: "UE GAS / 类魂战斗", // 可修改：分类
     images: ["/LostLand.png", "https://picsum.photos/seed/fallen2/1200/800", "https://picsum.photos/seed/fallen3/1200/800"], // 可修改：图片链接列表
-    video: "#", // 可修改：视频链接
+    video: "#", // 可修改：B站视频链接 (例如: "https://www.bilibili.com/video/BV...")
+    downloadLink: "#", // 可修改：百度网盘下载链接 (例如: "https://pan.baidu.com/s/...")
     description: "基于UE GAS框架，设计并开发一套基于“虚能”为循环资源的类魂战斗框架。包含普通小怪、精英Boss及大体型龙形Boss的AI设计与实现。", // 可修改：描述
     //awards: ["类魂", "GAS", "BOSS战"], // 可修改：奖项
     tech: ["UE5", "GAS", "行为树"] // 可修改：技术栈
@@ -119,11 +120,12 @@ const DEMOS = [
     tag: "策略卡牌 全流程",
     category: "肉鸽 / 词条自定义",
     images: [
-      "https://picsum.photos/seed/meme/1200/800", 
-      "https://picsum.photos/seed/meme2/1200/800",
-      "https://picsum.photos/seed/meme3/1200/800"
+      "/DemoGame/TapTap01.jpg", 
+      "/DemoGame/TapTap02.jpg",
+      "/DemoGame/TapTap03.jpg"
     ],
-    video: "#",
+    video: "https://www.taptap.cn/app/781253?os=pc", // 可修改：B站视频链接
+    downloadLink: "https://www.taptap.cn/app/781253?os=pc", // 可修改：百度网盘下载链接
     description: "基于UE GamePlayTags实现的词条自定义配置的肉鸽卡牌游戏，玩家可自定义局内卡牌词条内容，通过组合与强化获得更强卡组。已上架TapTap。",
     awards: ["TapTap 开放试玩"],
     tech: ["UE5", "UI 设计", "系统设计"]
@@ -133,11 +135,12 @@ const DEMOS = [
     tag: "轻竞技 Demo",
     category: "AI+游戏训练营",
     images: [
-      "https://picsum.photos/seed/dragon/1200/800",
-      "https://picsum.photos/seed/dragon2/1200/800",
-      "https://picsum.photos/seed/dragon3/1200/800"
+      "/DemoGame/LongZhougame01.jpg",
+      "/DemoGame/LongZhouGame02.jpg",
+      "/DemoGame/LongZhougame03.jpg",
     ],
-    video: "#",
+    video: "#", // 可修改：B站视频链接
+    downloadLink: "https://pan.baidu.com/s/16qPFveF8oubwh2x0-OxIDw?pwd=8888", // 可修改：百度网盘下载链接
     description: "面向用户群体设计的轻度竞技消除游戏。通过消除积攒士气并合理释放技能，争取竞赛第一名。",
     awards: ["最佳玩法奖", "最佳AI应用奖"],
     tech: ["AI 训练", "休闲游戏"]
@@ -147,11 +150,12 @@ const DEMOS = [
     tag: "VR，RPG",
     category: "VR / RPG",
     images: [
-      "https://picsum.photos/seed/vr-game/1200/800",
-      "https://picsum.photos/seed/vr-game2/1200/800",
-      "https://picsum.photos/seed/vr-game3/1200/800"
+      "/DemoGame/VRGame01.jpg",
+      "/DemoGame/VRGame02.jpg",
+      "/DemoGame/VRGame03.jpg"
     ],
-    video: "#",
+    video: "https://www.bilibili.com/video/BV1okwTe5EaY/?spm_id_from=333.337.search-card.all.click&vd_source=838b90a95a61e8bf8e67724156422195", // 可修改：B站视频链接
+    downloadLink: "https://pan.baidu.com/s/1kiPzW2apb5Ri43sH2qqdUQ?pwd=8888", // 可修改：百度网盘下载链接
     description: "基于UE开发的一款角色扮演VR游戏Demo,游戏内玩家需要合理使用手中武器，战胜强敌，寻得出路",
     tech: ["UE5", "VR", "RPG"]
   },
@@ -160,11 +164,12 @@ const DEMOS = [
     tag: "48hGameJam，关卡解密",
     category: "Game Jam / 解密",
     images: [
-      "https://picsum.photos/seed/dao/1200/800",
-      "https://picsum.photos/seed/dao2/1200/800",
-      "https://picsum.photos/seed/dao3/1200/800"
+      "/DemoGame/Daogame01.jpg",
+      "/DemoGame/Daogame02.jpg",
+      "/DemoGame/Daogame03.jpg"
     ],
-    video: "#",
+    video: "#", // 可修改：B站视频链接
+    downloadLink: "https://pan.baidu.com/s/1TSLcqD0CHcrrNxmB__IETQ?pwd=8888 ", // 可修改：百度网盘下载链接
     description: "将传统文化中五行要素与推箱子要素进行结合设计的一款关卡解密类游戏",
     awards: ["优秀作品"],
     tech: ["UE5", "关卡设计", "解密"]
@@ -192,13 +197,15 @@ const EDUCATION = [
   }
 ];
 
-// 可修改：获奖荣誉
-const AWARDS = [
-  { name: "Red Dot: Best of the Best", icon: <Trophy className="w-4 h-4" /> }, // 可修改：奖项名称
-  { name: "Good Design Award", icon: <Trophy className="w-4 h-4" /> },
-  { name: "IF DESIGN AWARD", icon: <Trophy className="w-4 h-4" /> },
-  { name: "国家一等奖学金", icon: <Award className="w-4 h-4" /> },
-  { name: "国家励志奖学金", icon: <Award className="w-4 h-4" /> },
+// 可修改：个人获奖经历
+const PERSONAL_AWARDS = [
+  { name: "iF DESIGN AWARD 2024 WINNER", date: "2024.2" },
+  { name: "Good Design Award 2023", date: "2023" },
+  { name: "2022年北京冬奥会、冬残奥会志愿保障服务“优秀志愿者标兵”", date: "2022年4月" },
+  { name: "第十六届全国大学生先进成图技术与产品信息建模创新大赛一等奖", date: "2023.8" },
+  { name: "北京市大学生工程设计表达竞赛一等奖", date: "2023.4" },
+  { name: "北京市大学生交通科技竞赛二等奖", date: "2022.11" },
+  { name: "国家励志奖学金", date: "2020-2024" }
 ];
 
 // --- Components ---
@@ -229,11 +236,22 @@ const PdfModal = ({ isOpen, onClose, url }: { isOpen: boolean, onClose: () => vo
                 <X className="w-6 h-6" />
               </button>
             </div>
-            <iframe 
-              src={url} 
+            <object 
+              data={url} 
+              type="application/pdf"
               className="w-full h-full border-none"
-              title="Resume Preview"
-            />
+            >
+              <div className="flex flex-col items-center justify-center h-full text-zinc-400 gap-4">
+                <p>您的浏览器不支持直接预览 PDF。</p>
+                <a 
+                  href={url} 
+                  download 
+                  className="px-6 py-3 bg-emerald-600 text-white rounded-full hover:bg-emerald-500 transition-colors"
+                >
+                  点击下载简历
+                </a>
+              </div>
+            </object>
           </motion.div>
         </motion.div>
       )}
@@ -318,9 +336,9 @@ const Hero = () => {
             </div>
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-display font-black text-white leading-[0.9] mb-10 tracking-tighter">
+          <h1 className="text-6xl md:text-8xl font-display font-black text-white leading-tight mb-10 tracking-tighter">
             你好，<br />
-            我是 <span className="text-gradient">先胜.</span>
+            我是 <span className="text-gradient">打坐ing.</span>
           </h1>
 
           <div className="space-y-8 mb-12">
@@ -371,7 +389,7 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="relative z-10 aspect-[4/5] rounded-[40px] overflow-hidden border border-white/5 p-1 bg-zinc-900/20 backdrop-blur-3xl shadow-2xl shadow-black/50 group">
+          <div className="relative z-10 aspect-square rounded-[40px] overflow-hidden border border-white/5 p-1 bg-zinc-900/20 backdrop-blur-3xl shadow-2xl shadow-black/50 group">
             <img 
               src={PERSONAL_INFO.avatarUrl} 
               alt={PERSONAL_INFO.name} 
@@ -417,7 +435,7 @@ const Hero = () => {
   );
 };
 
-const ImageCarousel = ({ images, title }: { images: string[], title: string }) => {
+const ImageCarousel = ({ images, title, isPortrait = false }: { images: string[], title: string, isPortrait?: boolean }) => {
   const [index, setIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -431,9 +449,11 @@ const ImageCarousel = ({ images, title }: { images: string[], title: string }) =
     return () => clearInterval(timer);
   }, [images.length, isHovered]);
 
+  const containerAspect = isPortrait ? "aspect-[9/16] max-w-sm mx-auto" : "aspect-video";
+
   if (images.length <= 1) {
     return (
-      <div className="relative aspect-video rounded-[40px] overflow-hidden border border-white/10">
+      <div className={`relative ${containerAspect} rounded-[40px] overflow-hidden border border-white/10`}>
         <img 
           src={images[0]} 
           alt={title} 
@@ -446,7 +466,7 @@ const ImageCarousel = ({ images, title }: { images: string[], title: string }) =
 
   return (
     <div 
-      className="relative aspect-video rounded-[40px] overflow-hidden border border-white/10 group/carousel"
+      className={`relative ${containerAspect} rounded-[40px] overflow-hidden border border-white/10 group/carousel`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -507,7 +527,7 @@ const DemoSection = ({ onPreview }: { onPreview: () => void }) => {
           </h2>
           <p className="text-zinc-400 max-w-md text-lg">
             {/* 可修改：作品集区域描述 */}
-            核心作品展示：深度解析战斗系统、AI 逻辑及核心玩法实现。
+            主要Demo设计：战斗系统搭建、AI行为树逻辑设计、全流程游戏开发。
           </p>
         </div>
 
@@ -522,8 +542,8 @@ const DemoSection = ({ onPreview }: { onPreview: () => void }) => {
               className={`group relative grid lg:grid-cols-2 gap-16 items-center`}
             >
               <div className={`relative ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
-                <ImageCarousel images={demo.images} title={demo.title} />
-                <div className="absolute -bottom-4 left-8 flex flex-wrap gap-3 pointer-events-none">
+                <ImageCarousel images={demo.images} title={demo.title} isPortrait={demo.title.includes("龙舟消消乐")} />
+                <div className={`absolute -bottom-4 ${demo.title.includes("龙舟消消乐") ? 'left-1/2 -translate-x-1/2 w-max' : 'left-8'} flex flex-wrap gap-3 pointer-events-none`}>
                   {demo.tech.map(t => (
                     <span key={t} className="px-4 py-1.5 bg-black/80 backdrop-blur-xl text-[10px] font-black uppercase tracking-widest text-emerald-400 rounded-full border border-white/10">
                       {t}
@@ -554,11 +574,11 @@ const DemoSection = ({ onPreview }: { onPreview: () => void }) => {
                   ))}
                 </div>
                 <div className={`flex gap-6 ${i % 2 === 1 ? 'lg:justify-end' : ''}`}>
-                  <a href={demo.video} className="px-8 py-4 bg-white text-black text-xs font-black uppercase tracking-widest rounded-2xl hover:bg-emerald-500 hover:text-white transition-all flex items-center gap-3">
+                  <a href={demo.video} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-black text-xs font-black uppercase tracking-widest rounded-2xl hover:bg-emerald-500 hover:text-white transition-all flex items-center gap-3">
                     <PlayCircle className="w-5 h-5" />
                     观看演示
                   </a>
-                  <a href="#" className="px-8 py-4 bg-zinc-900 border border-white/10 text-white text-xs font-black uppercase tracking-widest rounded-2xl hover:border-white/30 transition-all flex items-center gap-3">
+                  <a href={demo.downloadLink} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-zinc-900 border border-white/10 text-white text-xs font-black uppercase tracking-widest rounded-2xl hover:border-white/30 transition-all flex items-center gap-3">
                     <Download className="w-5 h-5" />
                     下载试玩
                   </a>
@@ -613,7 +633,7 @@ const PersonalDossier = () => {
                     资质证书
                   </p>
                   <div className="flex flex-wrap gap-3">
-                    {["CET-4", "普通话二甲", "UE5 开发认证"].map((cert) => (
+                    {["CET-4", "普通话二甲"].map((cert) => (
                       <span key={cert} className="px-4 py-2 bg-zinc-950/50 border border-white/10 rounded-xl text-[10px] font-black text-zinc-300 hover:border-emerald-500/50 hover:text-white transition-all cursor-default">
                         {cert}
                       </span>
@@ -652,7 +672,7 @@ const PersonalDossier = () => {
             <div>
               <h3 className="text-2xl font-display font-black text-white mb-12 tracking-widest uppercase flex items-center gap-5">
                 <span className="w-12 h-[2px] bg-emerald-500" />
-                我的关注
+                正在学习
               </h3>
               <div className="grid md:grid-cols-2 gap-8">
                 {[
@@ -667,8 +687,8 @@ const PersonalDossier = () => {
                     icon: <Sword className="w-7 h-7" />
                   },
                   {
-                    title: "设计应用",
-                    desc: "结合工业设计背景，尝试从用户认知维度去思考 UI 交互与战斗动线的合理性。",
+                    title: "AI+游戏设计",
+                    desc: "以设计师视角进行AI+游戏设计与开发，正在积极学习与探索",
                     icon: <Layers className="w-7 h-7" />
                   },
                   {
@@ -694,7 +714,7 @@ const PersonalDossier = () => {
               <div className="relative z-10">
                 <h3 className="text-4xl font-display font-black mb-8 tracking-tighter">一点想法.</h3>
                 <p className="text-zinc-300 text-2xl leading-tight font-medium italic tracking-tight">
-                  “我始终觉得，好的战斗设计不只是数值的计算，更是情绪的传递。我希望通过不断的学习和尝试，能让玩家在操作中感受到那种纯粹的‘掌控感’。”
+                  “通过自己的设计与实践，为玩家带来一场令人难忘的BOSS战！”
                 </p>
               </div>
               <Gamepad2 className="absolute -bottom-16 -right-16 w-80 h-80 text-white/5 rotate-12 group-hover:rotate-0 transition-transform duration-1000" />
@@ -783,46 +803,161 @@ const ExperienceSection = () => {
   );
 };
 
-const AwardsBento = () => {
+const AwardsSection = () => {
   return (
-    <section className="py-32 bg-black/20 backdrop-blur-sm border-y border-white/5 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/5 blur-[120px] rounded-full -mr-48 -mt-48" />
+    <section id="awards" className="py-32 bg-transparent relative overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="md:col-span-2 glass-card p-16 rounded-[60px] flex flex-col justify-between border border-white/10 shadow-2xl relative overflow-hidden group">
-            <div className="relative z-10">
-              <div className="inline-flex items-center gap-3 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-8">
-                <Trophy className="w-4 h-4 text-emerald-500" />
-                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-400">Learning & Recognition</span>
-              </div>
-              <h3 className="text-5xl md:text-6xl font-display font-black text-white mb-8 tracking-tighter">学习认可.</h3>
-              <p className="text-zinc-400 text-xl max-w-lg mb-12 font-medium leading-relaxed">
-                在学期间获得的设计奖项，是对我在交互逻辑、视觉传达以及系统设计初步探索的肯定。
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-4 relative z-10">
-              {AWARDS.map((award, i) => (
-                <motion.div 
-                  key={i} 
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  className="px-8 py-4 bg-zinc-900/50 backdrop-blur-md border border-white/10 rounded-2xl flex items-center gap-4 text-sm font-black text-white group/award"
-                >
-                  <div className="text-emerald-500 group-hover/award:scale-110 transition-transform">{award.icon}</div>
-                  {award.name}
-                </motion.div>
-              ))}
-            </div>
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-emerald-500/5 blur-3xl rounded-full -mr-32 -mb-32 group-hover:bg-emerald-500/10 transition-colors duration-700" />
+        <div className="mb-20">
+          <div className="inline-flex items-center gap-3 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-8">
+            <Trophy className="w-4 h-4 text-emerald-500" />
+            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-400">Honors & Awards</span>
           </div>
-          <div className="bg-zinc-900/40 backdrop-blur-md p-16 rounded-[60px] flex flex-col justify-between text-white group overflow-hidden relative border border-white/5 shadow-2xl">
-            <div className="relative z-10">
-              <div className="w-20 h-20 bg-emerald-500/10 backdrop-blur-md rounded-[32px] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-700 border border-emerald-500/20">
-                <Trophy className="w-10 h-10 text-emerald-500" />
+          <h2 className="text-5xl md:text-7xl font-display font-black text-white mb-6 tracking-tighter">
+            个人 <br />
+            <span className="text-gradient">获奖经历.</span>
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {PERSONAL_AWARDS.map((award, i) => (
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="flex items-center justify-between p-8 bg-zinc-900/40 backdrop-blur-md border border-white/10 rounded-[24px] hover:border-emerald-500/30 transition-all duration-500 group"
+            >
+              <div className="flex items-center gap-5">
+                <div className="w-10 h-10 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-500 border border-emerald-500/20 group-hover:scale-110 transition-transform flex-shrink-0">
+                  <Award className="w-5 h-5" />
+                </div>
+                <h3 className="font-bold text-white text-base tracking-tight group-hover:text-emerald-400 transition-colors">{award.name}</h3>
               </div>
-              <h3 className="text-4xl font-display font-black leading-[0.9] mb-6 tracking-tighter">红点奖 <br /><span className="text-emerald-500">BEST OF THE BEST.</span></h3>
-              <p className="text-zinc-400 text-base font-medium leading-relaxed">一次对创意的认可，也是我设计之路上的重要里程碑。</p>
+              <span className="text-xs font-black uppercase tracking-widest text-zinc-500 flex-shrink-0 ml-4">{award.date}</span>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const BilibiliSection = () => {
+  const collections = [
+    {
+      title: "卡牌肉鸽教程",
+      desc: "基于UE引擎Gameplaytags功能从零开始制作一款类杀戮尖塔卡牌肉鸽游戏。搭配属于你的对战卡组吧",
+      stats: "60视频 · 3.8w 播放",
+      link: "https://www.bilibili.com/video/BV1Fb2xBpExY/?spm_id_from=333.1387.collection.video_card.click"
+    },
+    {
+      title: "UE5 GAS 战斗系统实战",
+      desc: "从零开始搭建基于 Gameplay Ability System 的动作游戏战斗框架，包含连招、受击反馈、技能特效等核心机制。",
+      stats: "15 视频 · 0.6w 播放",
+      link: "https://space.bilibili.com/496731599/lists/7061892?type=season"
+    },
+    {
+      title: "UE开发小技巧",
+      desc: "分享个人学习制作过程中的一些功能的实现方式",
+      stats: "20+ 视频 · 1.2w 播放",
+      link: "https://space.bilibili.com/496731599/lists/7061892?type=season"
+    },
+   
+  ];
+
+  return (
+    <section id="bilibili" className="py-32 bg-transparent relative overflow-hidden border-t border-white/5">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,#10b98105,transparent_50%)]" />
+      <div className="max-w-7xl mx-auto px-8 relative z-10">
+        <div className="mb-20">
+          <div className="inline-flex items-center gap-3 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-8">
+            <PlayCircle className="w-4 h-4 text-emerald-500" />
+            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-400">Bilibili Channel</span>
+          </div>
+          <h2 className="text-5xl md:text-7xl font-display font-black text-white mb-6 tracking-tighter">
+            视频 <br />
+            <span className="text-gradient">创作合集.</span>
+          </h2>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left: Image Layout */}
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative group h-full min-h-[400px]"
+          >
+            <div className="absolute inset-0 bg-emerald-500/20 rounded-[40px] blur-3xl group-hover:bg-emerald-500/30 transition-colors duration-700" />
+            <div className="relative h-full rounded-[40px] overflow-hidden border border-white/10 bg-zinc-900/50 backdrop-blur-sm">
+              <img 
+                src="/DSC_2414.jpg" 
+                alt="Bilibili Channel Preview" 
+                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent" />
+              <div className="absolute bottom-10 left-10 right-10 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-emerald-500">
+                    <img src={PERSONAL_INFO.avatarUrl} alt="Avatar" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-black text-white">{PERSONAL_INFO.name}</h3>
+                    <p className="text-emerald-400 font-bold text-sm tracking-widest uppercase mt-1">Bilibili UP主</p>
+                  </div>
+                </div>
+                <a 
+                  href="https://space.bilibili.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-black font-black uppercase tracking-widest text-xs rounded-full hover:bg-emerald-500 hover:text-white transition-colors"
+                >
+                  前往主页 <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
             </div>
-            <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-emerald-500/5 blur-[100px] rounded-full group-hover:scale-125 transition-transform duration-1000" />
+          </motion.div>
+
+          {/* Right: Text Content Blocks */}
+          <div className="space-y-6">
+            {collections.map((item, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="p-8 bg-zinc-900/40 backdrop-blur-md border border-white/10 rounded-[32px] hover:border-emerald-500/30 transition-all duration-500 group relative overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl group-hover:bg-emerald-500/10 transition-colors duration-500" />
+                
+                <div className="flex items-start justify-between gap-4 mb-4 relative z-10">
+                  <h3 className="text-2xl font-black text-white tracking-tight group-hover:text-emerald-400 transition-colors">{item.title}</h3>
+                  <a 
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-emerald-500 transition-colors flex-shrink-0"
+                  >
+                    <PlayCircle className="w-5 h-5" />
+                  </a>
+                </div>
+                
+                <p className="text-zinc-400 text-sm leading-relaxed mb-6 relative z-10">
+                  {item.desc}
+                </p>
+                
+                <div className="flex items-center gap-4 relative z-10">
+                  <div className="flex items-center gap-2 text-xs font-bold text-zinc-500 uppercase tracking-widest">
+                    <Activity className="w-4 h-4 text-emerald-500" />
+                    {item.stats}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
@@ -845,12 +980,12 @@ const Contact = ({ onPreview }: { onPreview: () => void }) => {
             <Zap className="w-4 h-4 text-emerald-500" />
             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-400">Get In Touch</span>
           </div>
-          <h2 className="text-7xl md:text-[100px] font-display font-black text-white mb-12 tracking-tighter leading-[0.9]">
-            期待与你 <br />
-            <span className="text-gradient">交流.</span>
+          <h2 className="text-7xl md:text-[100px] font-display font-black text-white mb-12 tracking-tighter leading-tight">
+            期待参与 <br />
+            <span className="text-gradient">下一场“战斗”.</span>
           </h2>
           <p className="text-xl text-zinc-500 mb-20 max-w-3xl mx-auto font-medium leading-relaxed">
-            我正在寻找 <span className="text-white font-bold">2026 年暑期游戏策划实习机会</span>。如果你正在寻找一位热爱游戏、愿意在战斗系统与 AI 逻辑领域深耕的伙伴，请随时联系我。
+            我正在寻找 <span className="text-white font-bold">2026 年暑期游戏策划实习机会</span>。欢迎您随时联系我。
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-8">
             <a 
@@ -890,7 +1025,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-10">
         <div className="text-center md:text-left">
           {/* 可修改：页脚姓名 */}
-          <p className="text-xl font-display font-black text-white mb-2 tracking-tighter">先胜</p>
+          <p className="text-xl font-display font-black text-white mb-2 tracking-tighter">打坐ing</p>
           {/* 可修改：版权年份与文本 */}
           <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-700">Personal Portfolio © {new Date().getFullYear()}</p>
         </div>
@@ -915,7 +1050,7 @@ const GamerDNA = () => {
               <Activity className="w-4 h-4 text-emerald-500" />
               <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-400">Player Profile</span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-display font-black text-white mb-8 tracking-tighter uppercase">游戏 <br /><span className="text-gradient">生活.</span></h2>
+            <h2 className="text-5xl md:text-7xl font-display font-black text-white mb-8 tracking-tighter uppercase">游戏 <br /><span className="text-gradient">经历.</span></h2>
             <div className="p-10 bg-zinc-900/20 backdrop-blur-xl border border-white/5 rounded-[40px] mb-8">
               <div className="flex items-center gap-6 mb-8">
                 <div className="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-500 border border-emerald-500/20">
@@ -1039,7 +1174,8 @@ export default function App() {
         <GamerDNA />
         <PersonalDossier />
         <ExperienceSection />
-        <AwardsBento />
+        <AwardsSection />
+        <BilibiliSection />
         <Contact onPreview={() => setIsPdfOpen(true)} />
       </main>
       <Footer />
