@@ -65,7 +65,7 @@ const SOFTWARE_SKILLS = [
   { name: "Unreal Engine", icon: "/icons/ue.svg", level: "掌握" }, // 准备替换为 public/icons/ue.svg
   { name: "Unity", icon: "/icons/unity.svg", level: "熟悉" },
   { name: "Figma", icon: "/icons/figma.svg", level: "掌握" },
-  { name: "C++", icon: "/icons/cpp.svg", level: "基础" },
+  { name: "C++", icon: "/icons/C++.svg", level: "基础" },
   { name: "Blender", icon: "/icons/blender.svg", level: "熟悉" }
 ];
 
@@ -532,7 +532,7 @@ const DemoSection = ({ onPreview }: { onPreview: () => void }) => {
           </h2>
           <p className="text-zinc-400 max-w-md text-lg">
             {/* 可修改：作品集区域描述 */}
-            主要Demo设计：战斗系统搭建、AI行为树逻辑设计、全流程游戏开发。
+            主要Demo：战斗系统搭建、AI行为树逻辑设计、全流程游戏开发。
           </p>
         </div>
 
