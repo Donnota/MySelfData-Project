@@ -48,7 +48,7 @@ const PERSONAL_INFO = {
   phone: "17642128621", // 可修改：电话
   location: "北京 / 朝阳", // 可修改：坐标
   resumeUrl: "/resume.pdf", // 可修改：简历 PDF 链接 (用于预览和下载)
-  avatarUrl: "/icons/Self.jpg", // 可修改：个人头像/首屏大图链接
+  avatarUrl: "./icons/Self.jpg", // 可修改：个人头像/首屏大图链接
   globalBgUrl: "https://picsum.photos/seed/game-bg/1920/1080?blur=4", // 可修改：全局背景图片链接
   intro: "目前正在北邮攻读设计学硕士，意向岗位为游戏战斗策划。希望能够通过个人的设计与实现构建出一场又一场令玩家难忘的BOSS战。", // 可修改：个人简介
   summary: [ // 可修改：核心优势列表
