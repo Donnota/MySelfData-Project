@@ -39,7 +39,7 @@ import {
 
 // import lostLandImg from './assets/LostLand.png';
 // import dsc2414Img from './assets/DSC_2414.jpg';
-const lostLandImg = "/assets/lostland.png";
+const lostLandImg = "/gameicon/LostLand01.webp";
 // const dsc2414Img = "/demogame/DSC.png";
 
 /// --- Data from Resume (可修改：个人基本信息) ---
@@ -50,7 +50,7 @@ const PERSONAL_INFO = {
   phone: "17642128621", // 可修改：电话
   location: "北京 / 朝阳", // 可修改：坐标
   resumeUrl: "/resume.pdf", // 可修改：简历 PDF 链接 (用于预览和下载)
-  avatarUrl: "/gameicon/Self.png", // 可修改：个人头像/首屏大图链接
+  avatarUrl: "/gameicon/Self.webp", // 可修改：个人头像/首屏大图链接
   globalBgUrl: "https://picsum.photos/seed/game-bg/1920/1080?blur=4", // 可修改：全局背景图片链接
   intro: "目前正在北邮攻读设计学硕士，意向岗位为游戏战斗策划。希望能够通过个人的设计与实现构建出一场又一场令玩家难忘的BOSS战。", // 可修改：个人简介
   summary: [ // 可修改：核心优势列表
@@ -114,9 +114,9 @@ const DEMOS = [
     tag: "战斗框架 Demo", // 可修改：标签
     category: "UE GAS / 类魂战斗", // 可修改：分类
     images: [
-            "/gameicon/LostLand01.png",
-            "/gameicon/LostLand02.png",
-            "/gameicon/LostLand03.png"
+            "/gameicon/LostLand01.webp",
+            "/gameicon/LostLand02.webp",
+            "/gameicon/LostLand03.webp"
      ], // 可修改：图片链接列表
     video: "https://www.bilibili.com/video/BV12JcXzVEsr/?spm_id_from=333.1387.homepage.video_card.click&vd_source=838b90a95a61e8bf8e67724156422195", // 可修改：B站视频链接 (例如: "https://www.bilibili.com/video/BV...")
     downloadLink: "https://pan.baidu.com/s/1_obnVQZSff_l7FXrV26EqQ?pwd=8888", // 可修改：百度网盘下载链接 (例如: "https://pan.baidu.com/s/...")
@@ -129,9 +129,9 @@ const DEMOS = [
     tag: "策略卡牌 全流程",
     category: "肉鸽 / 词条自定义",
     images: [
-      "/gameicon/TapTap01.png", 
-      "/gameicon/TapTap02.png", 
-      "/gameicon/TapTap03.png"
+      "/gameicon/TapTap01.webp", 
+      "/gameicon/TapTap02.webp", 
+      "/gameicon/TapTap03.webp"
     ],
     video: "https://www.taptap.cn/app/781253?os=pc", // 可修改：B站视频链接
     downloadLink: "https://www.taptap.cn/app/781253?os=pc", // 可修改：百度网盘下载链接
@@ -144,11 +144,11 @@ const DEMOS = [
     tag: "轻竞技 Demo",
     category: "AI+游戏训练营",
     images: [
-      "/gameicon/longzhougame01.png",
-      "/gameicon/longzhougame02.png",
-      "/gameicon/longzhougame03.png",
+      "/gameicon/longzhougame01.webp",
+      "/gameicon/longzhougame02.webp",
+      "/gameicon/longzhougame03.webp",
     ],
-    video: "#", // 可修改：B站视频链接
+      video: "https://www.bilibili.com/video/BV1vDcozBEnx/?spm_id_from=333.1387.homepage.video_card.click&vd_source=838b90a95a61e8bf8e67724156422195", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/16qPFveF8oubwh2x0-OxIDw?pwd=8888", // 可修改：百度网盘下载链接
     description: "面向用户群体设计的轻度竞技消除游戏。通过消除积攒士气并合理释放技能，争取竞赛第一名。",
     awards: ["最佳玩法奖", "最佳AI应用奖"],
@@ -159,9 +159,9 @@ const DEMOS = [
     tag: "VR，RPG",
     category: "VR / RPG",
     images: [
-      "/gameicon/vrgame01.png",
-      "/gameicon/vrgame02.png",
-      "/gameicon/vrgame03.png"
+      "/gameicon/VRGame01.webp",
+      "/gameicon/VRGame02.webp",
+      "/gameicon/VRGame03.webp"
     ],
     video: "https://www.bilibili.com/video/BV1okwTe5EaY/?spm_id_from=333.337.search-card.all.click&vd_source=838b90a95a61e8bf8e67724156422195", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/1kiPzW2apb5Ri43sH2qqdUQ?pwd=8888", // 可修改：百度网盘下载链接
@@ -173,11 +173,11 @@ const DEMOS = [
     tag: "48hGameJam，关卡解密",
     category: "Game Jam / 解密",
     images: [
-      "/gameicon/daogame01.png",
-      "/gameicon/daogame02.png",
-      "/gameicon/daogame03.png"
+      "/gameicon/Dao01.webp",
+      "/gameicon/Dao02.webp",
+      "/gameicon/Dao03.webp"
     ],
-    video: "#", // 可修改：B站视频链接
+      video: "https://pan.baidu.com/s/1TSLcqD0CHcrrNxmB__IETQ?pwd=8888", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/1TSLcqD0CHcrrNxmB__IETQ?pwd=8888 ", // 可修改：百度网盘下载链接
     description: "将传统文化中五行要素与推箱子要素进行结合设计的一款关卡解密类游戏",
     awards: ["优秀作品"],
@@ -407,7 +407,7 @@ const Hero = () => {
         >
           <div className="relative z-10 aspect-square rounded-[40px] overflow-hidden border border-white/5 p-1 bg-zinc-900/20 backdrop-blur-3xl shadow-2xl shadow-black/50 group">
             <img 
-              src={avatarError ? "/gameicon/Self.png" : PERSONAL_INFO.avatarUrl} 
+              src={avatarError ? "/gameicon/Self.webp" : PERSONAL_INFO.avatarUrl} 
               alt={PERSONAL_INFO.name} 
               className="w-full h-full object-cover rounded-[36px] transition-all duration-1000 scale-105 group-hover:scale-100"
               referrerPolicy="no-referrer"
@@ -923,7 +923,7 @@ const BilibiliSection = () => {
             <div className="absolute inset-0 bg-emerald-500/20 rounded-[40px] blur-3xl group-hover:bg-emerald-500/30 transition-colors duration-700" />
             <div className="relative h-full rounded-[40px] overflow-hidden border border-white/10 bg-zinc-900/50 backdrop-blur-sm">
               <img 
-                src="/gameicon/DSC_2414.png" 
+                src="/gameicon/DSC_2414.webp" 
                 alt="Bilibili Channel Preview" 
                 className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 referrerPolicy="no-referrer"
