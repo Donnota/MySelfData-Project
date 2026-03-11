@@ -114,12 +114,12 @@ const DEMOS = [
     tag: "战斗框架 Demo", // 可修改：标签
     category: "UE GAS / 类魂战斗", // 可修改：分类
     images: [
-      lostLandImg, 
-      "https://picsum.photos/seed/fallen2/1200/800", 
-      "https://picsum.photos/seed/fallen3/1200/800"
-    ], // 可修改：图片链接列表
-    video: "#", // 可修改：B站视频链接 (例如: "https://www.bilibili.com/video/BV...")
-    downloadLink: "#", // 可修改：百度网盘下载链接 (例如: "https://pan.baidu.com/s/...")
+            "/gameicon/taptap01.png",
+            "/gameicon/taptap02.png",
+            "/gameicon/taptap03.png"
+     ], // 可修改：图片链接列表
+    video: "https://www.bilibili.com/video/BV12JcXzVEsr/?spm_id_from=333.1387.homepage.video_card.click&vd_source=838b90a95a61e8bf8e67724156422195", // 可修改：B站视频链接 (例如: "https://www.bilibili.com/video/BV...")
+    downloadLink: "https://pan.baidu.com/s/1_obnVQZSff_l7FXrV26EqQ?pwd=8888", // 可修改：百度网盘下载链接 (例如: "https://pan.baidu.com/s/...")
     description: "基于UE GAS框架，设计并开发一套基于“虚能”为循环资源的类魂战斗框架。包含普通小怪、精英Boss及大体型龙形Boss的AI设计与实现。", // 可修改：描述
     //awards: ["类魂", "GAS", "BOSS战"], // 可修改：奖项
     tech: ["UE5", "GAS", "行为树"] // 可修改：技术栈
@@ -129,9 +129,9 @@ const DEMOS = [
     tag: "策略卡牌 全流程",
     category: "肉鸽 / 词条自定义",
     images: [
-      "/gameicon/taptap01.png", 
-      "/gameicon/taptap02.png", 
-      "/gameicon/taptap03.png"
+      "/gameicon/LostLand01.png", 
+      "/gameicon/LostLand02.png", 
+      "/gameicon/LostLand03.png"
     ],
     video: "https://www.taptap.cn/app/781253?os=pc", // 可修改：B站视频链接
     downloadLink: "https://www.taptap.cn/app/781253?os=pc", // 可修改：百度网盘下载链接
