@@ -148,7 +148,7 @@ const DEMOS = [
       "/gameicon/longzhougame02.webp",
       "/gameicon/longzhougame03.webp",
     ],
-      video: "https://www.bilibili.com/video/BV1vDcozBEnx/?spm_id_from=333.1387.homepage.video_card.click&vd_source=838b90a95a61e8bf8e67724156422195", // 可修改：B站视频链接
+    video: "https://www.bilibili.com/video/BV1vDcozBEnx/?spm_id_from=333.1387.homepage.video_card.click&vd_source=838b90a95a61e8bf8e67724156422195", // 可修改：B站视频链接
     downloadLink: "https://pan.baidu.com/s/16qPFveF8oubwh2x0-OxIDw?pwd=8888", // 可修改：百度网盘下载链接
     description: "面向用户群体设计的轻度竞技消除游戏。通过消除积攒士气并合理释放技能，争取竞赛第一名。",
     awards: ["最佳玩法奖", "最佳AI应用奖"],
