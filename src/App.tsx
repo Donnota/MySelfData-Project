@@ -114,9 +114,9 @@ const DEMOS = [
     tag: "战斗框架 Demo", // 可修改：标签
     category: "UE GAS / 类魂战斗", // 可修改：分类
     images: [
-            "/gameicon/taptap01.png",
-            "/gameicon/taptap02.png",
-            "/gameicon/taptap03.png"
+            "/gameicon/LostLand01.png",
+            "/gameicon/LostLand.png",
+            "/gameicon/LostLand.png"
      ], // 可修改：图片链接列表
     video: "https://www.bilibili.com/video/BV12JcXzVEsr/?spm_id_from=333.1387.homepage.video_card.click&vd_source=838b90a95a61e8bf8e67724156422195", // 可修改：B站视频链接 (例如: "https://www.bilibili.com/video/BV...")
     downloadLink: "https://pan.baidu.com/s/1_obnVQZSff_l7FXrV26EqQ?pwd=8888", // 可修改：百度网盘下载链接 (例如: "https://pan.baidu.com/s/...")
@@ -129,9 +129,9 @@ const DEMOS = [
     tag: "策略卡牌 全流程",
     category: "肉鸽 / 词条自定义",
     images: [
-      "/gameicon/LostLand01.png", 
-      "/gameicon/LostLand02.png", 
-      "/gameicon/LostLand03.png"
+      "/gameicon/taptap01.png", 
+      "/gameicon/taptap02.png", 
+      "/gameicon/taptap03.png"
     ],
     video: "https://www.taptap.cn/app/781253?os=pc", // 可修改：B站视频链接
     downloadLink: "https://www.taptap.cn/app/781253?os=pc", // 可修改：百度网盘下载链接
