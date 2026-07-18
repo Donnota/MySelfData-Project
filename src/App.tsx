@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "motion/react";
 import {
   Activity,
@@ -21,7 +20,6 @@ import {
   Wrench,
 } from "lucide-react";
 import { ImageCarousel } from "./components/ImageCarousel";
-import { PdfModal } from "./components/PdfModal";
 import {
   awards,
   designPillars,
@@ -83,7 +81,7 @@ function DynamicBackground() {
   );
 }
 
-function Navbar({ onPreview }: { onPreview: () => void }) {
+function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-800 bg-[#090b0d]/92 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
@@ -108,12 +106,14 @@ function Navbar({ onPreview }: { onPreview: () => void }) {
         </nav>
 
         <div className="flex items-center gap-2">
-          <button
-            onClick={onPreview}
+          <a
+            href={personalInfo.resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden border border-zinc-700 px-4 py-2 text-xs font-bold text-zinc-200 transition-colors hover:border-amber-400 hover:text-amber-300 sm:inline-flex"
           >
             预览简历
-          </button>
+          </a>
           <a
             href={personalInfo.resumeUrl}
             download
@@ -128,7 +128,7 @@ function Navbar({ onPreview }: { onPreview: () => void }) {
   );
 }
 
-function Hero({ onPreview }: { onPreview: () => void }) {
+function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-zinc-800">
       <div className="pointer-events-none absolute inset-0 tactical-grid opacity-40" />
@@ -158,13 +158,15 @@ function Hero({ onPreview }: { onPreview: () => void }) {
               查看项目经历
               <ClipboardList className="h-4 w-4" />
             </a>
-            <button
-              onClick={onPreview}
+            <a
+              href={personalInfo.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-zinc-700 px-5 py-3 text-sm font-bold text-zinc-200 transition-colors hover:border-amber-400 hover:text-amber-300"
             >
               简历 PDF
               <FileText className="h-4 w-4" />
-            </button>
+            </a>
           </div>
         </motion.div>
 
@@ -512,7 +514,7 @@ function AwardsAndVideoSection() {
   );
 }
 
-function ContactSection({ onPreview }: { onPreview: () => void }) {
+function ContactSection() {
   return (
     <section id="contact" className="py-20">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
@@ -537,13 +539,15 @@ function ContactSection({ onPreview }: { onPreview: () => void }) {
               </div>
             </div>
             <div className="flex flex-wrap gap-3">
-              <button
-                onClick={onPreview}
+              <a
+                href={personalInfo.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 border border-zinc-700 px-5 py-3 text-sm font-bold text-zinc-200 transition-colors hover:border-amber-400 hover:text-amber-300"
               >
                 <FileText className="h-4 w-4" />
                 预览简历
-              </button>
+              </a>
               <a
                 href={`mailto:${personalInfo.email}`}
                 className="inline-flex items-center gap-2 bg-amber-400 px-5 py-3 text-sm font-black text-zinc-950 transition-colors hover:bg-amber-300"
@@ -564,23 +568,20 @@ function ContactSection({ onPreview }: { onPreview: () => void }) {
 }
 
 export default function App() {
-  const [isPdfOpen, setIsPdfOpen] = useState(false);
-
   return (
     <div className="relative isolate min-h-screen overflow-hidden bg-[#090b0d] text-zinc-100 selection:bg-amber-300/30 selection:text-amber-100">
       <DynamicBackground />
-      <Navbar onPreview={() => setIsPdfOpen(true)} />
+      <Navbar />
       <main className="relative z-10">
-        <Hero onPreview={() => setIsPdfOpen(true)} />
+        <Hero />
         <MethodSection />
         <SkillSection />
         <ExperienceSection />
         <ProjectSection />
         <ResearchSection />
         <AwardsAndVideoSection />
-        <ContactSection onPreview={() => setIsPdfOpen(true)} />
+        <ContactSection />
       </main>
-      <PdfModal isOpen={isPdfOpen} onClose={() => setIsPdfOpen(false)} url={personalInfo.resumeUrl} />
     </div>
   );
 }
