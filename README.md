@@ -30,4 +30,4 @@ npm run preview
 - 页面内容：`src/App.tsx`
 - 全局样式：`src/index.css`
 - 静态资源：`public/`
-- 简历文件：`public/resume.pdf`
+- 简历文件：`public/北京邮电大学-刘先胜-游戏策划简历.pdf`

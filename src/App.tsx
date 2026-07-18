@@ -131,7 +131,7 @@ function Navbar({ onPreview }: { onPreview: () => void }) {
 function Hero({ onPreview }: { onPreview: () => void }) {
   return (
     <section className="relative overflow-hidden border-b border-zinc-800">
-      <div className="absolute inset-0 tactical-grid opacity-40" />
+      <div className="pointer-events-none absolute inset-0 tactical-grid opacity-40" />
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:py-28">
         <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}>
           <div className="mb-8 flex flex-wrap gap-2">

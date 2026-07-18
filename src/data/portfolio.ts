@@ -27,7 +27,7 @@ export const personalInfo = {
   email: "3142568588@qq.com",
   phone: "17642128621",
   location: "北京 / 朝阳",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/北京邮电大学-刘先胜-游戏策划简历.pdf",
   avatarUrl: "/gameicon/Self.webp",
   headline: "在校研究生，目标岗位为游戏战斗策划，具备商业项目上线、MOBA 战斗设计与战斗 AI 设计经验。",
   intro:
