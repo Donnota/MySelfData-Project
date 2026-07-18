@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -8,34 +8,184 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-zinc-950 text-zinc-100 antialiased selection:bg-emerald-500/30 selection:text-emerald-400;
+    @apply bg-[#090b0d] text-zinc-100 antialiased selection:bg-amber-300/30 selection:text-amber-100;
   }
 }
 
-.glass-card {
-  @apply bg-zinc-900/50 backdrop-blur-xl border border-white/10 shadow-2xl;
+.panel-card {
+  @apply border border-zinc-800 bg-[#0c0f12] transition-colors hover:border-zinc-700;
 }
 
-.text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400;
+.dynamic-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(245, 158, 11, 0.08), transparent 26%),
+    radial-gradient(circle at 82% 32%, rgba(120, 113, 108, 0.08), transparent 30%),
+    linear-gradient(180deg, rgba(9, 11, 13, 0.2), rgba(9, 11, 13, 0.95));
 }
 
-.glow-emerald {
-  box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.3);
+.dynamic-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 96px 96px;
+  opacity: 0.25;
 }
 
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+.dynamic-grid {
+  position: absolute;
+  inset: -20%;
+  background-image:
+    linear-gradient(rgba(251, 191, 36, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(251, 191, 36, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
+  transform: perspective(900px) rotateX(58deg) translateY(-12%);
+  transform-origin: center top;
+  animation: grid-drift 18s linear infinite;
+  opacity: 0.18;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+.dynamic-scanline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -18%;
+  height: 18%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(251, 191, 36, 0.06),
+    rgba(251, 191, 36, 0.12),
+    transparent
+  );
+  animation: scanline-pass 9s ease-in-out infinite;
+  opacity: 0.55;
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+.dynamic-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(34px);
+  opacity: 0.24;
+  animation: orb-drift 12s ease-in-out infinite alternate;
+}
+
+.dynamic-orb-a {
+  width: 320px;
+  height: 320px;
+  left: -90px;
+  top: 18%;
+  background: rgba(245, 158, 11, 0.16);
+}
+
+.dynamic-orb-b {
+  width: 420px;
+  height: 420px;
+  right: -160px;
+  bottom: 10%;
+  background: rgba(161, 98, 7, 0.13);
+  animation-delay: -5s;
+}
+
+.dynamic-node {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border: 1px solid rgba(251, 191, 36, 0.5);
+  background: rgba(251, 191, 36, 0.15);
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.35);
+  animation: node-pulse 4.8s ease-in-out infinite;
+}
+
+.dynamic-node-a {
+  left: 12%;
+  top: 32%;
+}
+
+.dynamic-node-b {
+  right: 18%;
+  top: 24%;
+  animation-delay: -1.5s;
+}
+
+.dynamic-node-c {
+  right: 28%;
+  bottom: 20%;
+  animation-delay: -3s;
+}
+
+.tactical-grid {
+  background-image:
+    linear-gradient(rgba(250, 204, 21, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250, 204, 21, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 86%);
+}
+
+@keyframes grid-drift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 56px 56px;
+  }
+}
+
+@keyframes scanline-pass {
+  0%, 18% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  38% {
+    opacity: 0.55;
+  }
+  72%, 100% {
+    transform: translateY(680%);
+    opacity: 0;
+  }
+}
+
+@keyframes orb-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(28px, -18px, 0) scale(1.08);
+  }
+}
+
+@keyframes node-pulse {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.8);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .dynamic-grid,
+  .dynamic-scanline,
+  .dynamic-orb,
+  .dynamic-node {
+    animation: none;
+  }
 }

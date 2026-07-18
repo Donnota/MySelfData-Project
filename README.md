@@ -1,20 +1,33 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 游戏战斗策划作品集
 
-# Run and deploy your AI Studio app
+这是一个基于 Vite、React、TypeScript、Tailwind CSS 的个人作品集网站，用于展示游戏策划简历、项目 Demo、技能栈和视频创作内容。
 
-This contains everything you need to run your app locally.
+## 本地运行
 
-View your app in AI Studio: https://ai.studio/apps/cc8ab821-3d82-43f0-a429-b090799dfc99
+**环境要求：** Node.js 22 或更高版本。
 
-## Run Locally
+```bash
+npm install
+npm run dev
+```
 
-**Prerequisites:**  Node.js
+默认访问地址：
 
+```text
+http://localhost:3000/
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 常用命令
+
+```bash
+npm run lint
+npm run build
+npm run preview
+```
+
+## 内容入口
+
+- 页面内容：`src/App.tsx`
+- 全局样式：`src/index.css`
+- 静态资源：`public/`
+- 简历文件：`public/resume.pdf`
